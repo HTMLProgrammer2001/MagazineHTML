@@ -1,0 +1,9 @@
+@import 'im';
+
+@mixin test($a, $b){
+    font-size: $a + $b;
+}
+
+body{
+    @include test(2px, 5px);
+}
