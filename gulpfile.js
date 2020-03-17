@@ -97,7 +97,7 @@ function watch(){
 
 function build(){
     return gulp.series(clean, gulp.parallel(
-       'html', 'css', 'scss', 'less', 'js', 'image'
+       html, css, scss, less, js, image
     ));
 }
 
@@ -108,5 +108,5 @@ gulp.task('html', html);
 gulp.task('js', js);
 gulp.task('image', image);
 gulp.task('watch', watch);
-gulp.task('build', build);
-gulp.task('default', build);
+gulp.task('build', build());
+gulp.task('default', build());
