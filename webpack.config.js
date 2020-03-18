@@ -37,7 +37,7 @@ let conf = {
 		}
 	},
     devtool: 'none',
-    mode: 'production'
+    mode: 'development'
 };
 
 

@@ -21,8 +21,10 @@ function css(){
         allowEmpty: true
     })
         .pipe(concat('bundle.css'))
+        .pipe(sourceMap.init())
         .pipe(autoprefixer())
         .pipe(cleanCSS())
+        .pipe(sourceMap.write())
         .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.stream());
 }
@@ -31,10 +33,12 @@ function scss(){
     return gulp.src('./src/scss/main.scss', {
         allowEmpty: true
     })
+        .pipe(sourceMap.init())
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('bundle.css'))
         .pipe(autoprefixer())
         .pipe(cleanCSS())
+        .pipe(sourceMap.write())
         .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.stream());
 }
@@ -43,10 +47,12 @@ function less(){
     return gulp.src('./src/less/main.less', {
         allowEmpty: true
     })
+        .pipe(sourceMap.init())
         .pipe(lessCompiler())
         .pipe(concat('bundle.css'))
         .pipe(autoprefixer())
         .pipe(cleanCSS())
+        .pipe(sourceMap.write())
         .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.stream());
 }
