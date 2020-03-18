@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const TerserPlugin = require('terser-webpack-plugin');
 
 let conf = {
 	output: {
@@ -8,6 +9,11 @@ let conf = {
 	},
 	module: {
 		rules: [
+            {
+                test: /\.(js|jsx)$/,
+                use: 'cache-loader',
+                exclude: '/node_modules/'
+            },
             {
                 test: /\.(js|jsx)$/,
                 loader: 'babel-loader',
@@ -36,7 +42,14 @@ let conf = {
 			modules: path.resolve(__dirname, 'node_modules')
 		}
 	},
-    devtool: 'none'
+    devtool: 'none',
+    optimization: {
+        minimizer: [
+            new TerserPlugin({
+                cache: true
+            })
+        ]
+    }
 };
 
 
