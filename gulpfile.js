@@ -7,7 +7,6 @@ const sass = require('gulp-sass');
 const lessCompiler = require('gulp-less');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
-const browserify = require('gulp-browserify');
 const sourceMap = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
 
@@ -57,8 +56,8 @@ function js(){
         allowEmpty: true
     })
         .pipe(webpackStream(webpackConfig), webpack)
-        .pipe(uglify())
         .pipe(concat('bundle.js'))
+        .pipe(uglify())
         .pipe(gulp.dest('./dist/js'))
         .pipe(browserSync.stream());
 }

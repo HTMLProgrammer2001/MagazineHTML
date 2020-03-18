@@ -1,4 +1,6 @@
-import {a} from './test';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-alert(a);
-console.log(1);
+import Counter from './test.js';
+
+ReactDOM.render(<Counter/>, document.getElementById('root'));

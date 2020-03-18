@@ -10,8 +10,11 @@ let conf = {
 		rules: [
             {
                 test: /\.(js|jsx)$/,
-                use: 'babel-loader',
-                exclude: '/node_modules/'
+                loader: 'babel-loader',
+                exclude: '/node_modules/',
+                query: {
+                    presets: ['react', 'es2015']
+                }
             }
 		]
 	},
@@ -32,14 +35,10 @@ let conf = {
 			assets: path.resolve(__dirname, 'src/assets/'),
 			modules: path.resolve(__dirname, 'node_modules')
 		}
-	}
+	},
+    devtool: 'none',
+    mode: 'production'
 };
 
 
-module.exports = (env, options) => {
-	let mode = options.mode === 'production';
-
-	conf.devtool = mode ? false : 'source-map';
-
-	return conf;
-};
+module.exports = conf;
