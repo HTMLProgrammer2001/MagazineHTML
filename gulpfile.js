@@ -1,7 +1,6 @@
 const gulp = require('gulp');
 const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
-const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
@@ -9,8 +8,12 @@ const lessCompiler = require('gulp-less');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const browserify = require('gulp-browserify');
+const sourceMap = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
-const reload = browserSync.reload;
+
+const webpackStream = require('webpack-stream');
+const webpackConfig = require('./webpack.config.js');
+const webpack = require('webpack');
 
 sass.compiler = require('node-sass');
 
@@ -19,7 +22,7 @@ function css(){
         allowEmpty: true
     })
         .pipe(concat('bundle.css'))
-        .pipe(autoprefixer('>0.1%'))
+        .pipe(autoprefixer())
         .pipe(cleanCSS())
         .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.stream());
@@ -31,7 +34,7 @@ function scss(){
     })
         .pipe(sass().on('error', sass.logError))
         .pipe(concat('bundle.css'))
-        .pipe(autoprefixer('>0.1%'))
+        .pipe(autoprefixer())
         .pipe(cleanCSS())
         .pipe(gulp.dest('./dist/css'))
         .pipe(browserSync.stream());
@@ -43,22 +46,18 @@ function less(){
     })
         .pipe(lessCompiler())
         .pipe(concat('bundle.css'))
-        .pipe(autoprefixer('>0.1%'))
+        .pipe(autoprefixer())
         .pipe(cleanCSS())
         .pipe(gulp.dest('./dist/css'))
-        .pipe(reload({stream: true}));
+        .pipe(browserSync.stream());
 }
 
 function js(){
     return gulp.src('./src/js/main.js', {
         allowEmpty: true
     })
-        .pipe(babel({presets: ['@babel/preset-env']}))
+        .pipe(webpackStream(webpackConfig), webpack)
         .pipe(uglify())
-        .pipe(browserify({
-            insertGlobals : true,
-            debug : false
-        }))
         .pipe(concat('bundle.js'))
         .pipe(gulp.dest('./dist/js'))
         .pipe(browserSync.stream());
@@ -88,7 +87,7 @@ function watch(){
         }
     });
 
-    gulp.watch('./src/pages/**/*.html', html).on('change', reload);
+    gulp.watch('./src/pages/**/*.html', html).on('change', browserSync.reload);
     gulp.watch('./src/scss/**/*.scss', scss);
     gulp.watch('./src/less/**/*.less', less);
     gulp.watch('./src/css/**/*.css', css);
