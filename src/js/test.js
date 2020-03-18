@@ -5,7 +5,7 @@ class Elem extends React.Component{
         super(props);
 
         this.state = {
-            count: 10
+            count: 1
         };
 
         this.increment = this.increment.bind(this);

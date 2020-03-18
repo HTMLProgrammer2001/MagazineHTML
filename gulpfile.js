@@ -6,6 +6,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const sass = require('gulp-sass');
 const lessCompiler = require('gulp-less');
 const imagemin = require('gulp-imagemin');
+const through = require('through2');
 const del = require('del');
 const sourceMap = require('gulp-sourcemaps');
 const browserSync = require('browser-sync').create();
@@ -57,15 +58,22 @@ function less(){
         .pipe(browserSync.stream());
 }
 
-function js(){
-    return gulp.src('./src/js/main.js', {
-        allowEmpty: true
-    })
-        .pipe(webpackStream(webpackConfig), webpack)
-        .pipe(concat('bundle.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest('./dist/js'))
-        .pipe(browserSync.stream());
+function js(mode){
+    return function javascript(){
+        return gulp.src('./src/js/main.js', {
+            allowEmpty: true
+        })
+            .pipe(sourceMap.init())
+            .pipe(webpackStream({
+                ...webpackConfig,
+                mode
+            }), webpack)
+            .pipe(concat('bundle.js'))
+            .pipe(mode === 'production' ? uglify() : through.obj((chunk, enc, cb) => cb(null, chunk)))
+            .pipe(sourceMap.write())
+            .pipe(gulp.dest('./dist/js'))
+            .pipe(browserSync.stream());
+    }
 }
 
 function image() {
@@ -96,12 +104,12 @@ function watch(){
     gulp.watch('./src/scss/**/*.scss', scss);
     gulp.watch('./src/less/**/*.less', less);
     gulp.watch('./src/css/**/*.css', css);
-    gulp.watch('./src/js/**/*.js', js);
+    gulp.watch('./src/js/**/*.js', js('development'));
 }
 
 function build(){
     return gulp.series(clean, gulp.parallel(
-       html, css, scss, less, js, image
+       html, css, scss, less, js('production'), image
     ));
 }
 
@@ -109,7 +117,7 @@ gulp.task('css', css);
 gulp.task('scss', scss);
 gulp.task('less', less);
 gulp.task('html', html);
-gulp.task('js', js);
+gulp.task('js', js('production'));
 gulp.task('image', image);
 gulp.task('watch', watch);
 gulp.task('build', build());

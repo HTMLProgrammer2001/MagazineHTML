@@ -36,8 +36,7 @@ let conf = {
 			modules: path.resolve(__dirname, 'node_modules')
 		}
 	},
-    devtool: 'none',
-    mode: 'development'
+    devtool: 'none'
 };
 
 
