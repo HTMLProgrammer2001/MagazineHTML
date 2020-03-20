@@ -66,13 +66,18 @@ function js(mode){
 		})
 			.pipe(eslint())
 			.pipe(eslint.formatEach('compact', process.stderr))
+			.pipe(eslint.failAfterError())
 			.pipe(sourceMap.init())
 			.pipe(webpackStream({
 				...webpackConfig,
 				mode
 			}), webpack)
 			.pipe(concat('bundle.js'))
-			.pipe(mode === 'production' ? uglify() : through.obj((chunk, enc, cb) => cb(null, chunk)))
+			.pipe(mode === 'production' ?
+				uglify() :
+				through.obj((chunk, enc, cb) =>
+					cb(null, chunk))
+			)
 			.pipe(sourceMap.write())
 			.pipe(gulp.dest('./dist/js'))
 			.pipe(browserSync.stream());
