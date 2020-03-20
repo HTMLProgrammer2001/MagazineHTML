@@ -9,28 +9,28 @@ let conf = {
 	},
 	module: {
 		rules: [
-            {
-                test: /\.(js|jsx)$/,
-                use: 'cache-loader',
-                exclude: '/node_modules/'
-            },
-            {
-                test: /\.(js|jsx)$/,
-                loader: 'babel-loader',
-                exclude: '/node_modules/',
-                query: {
-                    presets: ['react', 'es2015']
-                }
-            }
+			{
+				test: /\.(js|jsx)$/,
+				use: 'cache-loader',
+				exclude: '/node_modules/'
+			},
+			{
+				test: /\.(js|jsx)$/,
+				loader: 'babel-loader',
+				exclude: '/node_modules/',
+				query: {
+					presets: ['react', 'es2015']
+				}
+			}
 		]
 	},
-  	plugins: [
-  		new webpack.ProvidePlugin({
+	plugins: [
+		new webpack.ProvidePlugin({
 			$: 'jquery',
 			React: 'react',
 			ReactDOM: 'react-dom'
 		})
-  	],
+	],
 
 	resolve: {
 		alias: {
@@ -42,14 +42,14 @@ let conf = {
 			modules: path.resolve(__dirname, 'node_modules')
 		}
 	},
-    devtool: 'none',
-    optimization: {
-        minimizer: [
-            new TerserPlugin({
-                cache: true
-            })
-        ]
-    }
+	devtool: 'none',
+	optimization: {
+		minimizer: [
+			new TerserPlugin({
+				cache: true
+			})
+		]
+	}
 };
 
 
