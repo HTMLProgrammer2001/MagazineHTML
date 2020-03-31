@@ -1,3 +1,6 @@
 node_modules
 .idea
 dist
+*.psd
+PSD2
+.gitignore
