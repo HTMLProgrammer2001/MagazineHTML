@@ -1,0 +1,87 @@
+//global variables
+
+$red: #f1593b;
+$gray: #333333;
+$textGray: #adadad;
+$silver: #e5e5e5;
+$saleGreen: #40b322;
+$soldYellow: #f5cc2a;
+
+$prodColors:'blue', 'green', 'red', 'yellow', 'purple', 'black';
+
+$size: 16px;
+$bigSize: 18px;
+$headSize: 30px;
+
+$pad: 40px;
+
+%sale{
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+    padding: 5px 10px;
+
+    color: #fff;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+}
+
+%button{
+    text-align: center;
+
+    font: {
+        family: Poppins;
+        weight: 300;
+        size: 1rem;
+    }
+
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+    overflow: hidden;
+    cursor: pointer;
+    transition: .3s;
+
+    color: #fff;
+    text-transform: uppercase;
+}
+
+@mixin flex($jc: flex-start, $ai: flex-start, $dir: row, $wrap: nowrap){
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $dir;
+    flex-wrap: $wrap;
+}
+
+//general styles
+
+html{
+    font-size: $size;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+
+    height: 100vh;
+
+    font-size: 16px;
+    font-family: 'Poppins';
+    font-weight: 300;
+
+    overflow-x: hidden;
+}
+
+.container{
+    width: 75%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+}
+
+.cur{
+    cursor: pointer;
+}

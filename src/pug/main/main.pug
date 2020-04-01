@@ -1,0 +1,13 @@
+extends ../layout.pug
+
+block assets
+    link(href="css/main.css" rel="stylesheet")
+
+block content
+    include components/paginate
+
+    .goods
+        .container
+            include components/goods
+
+            include components/goodsForm

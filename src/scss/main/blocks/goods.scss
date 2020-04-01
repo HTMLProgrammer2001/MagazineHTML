@@ -1,0 +1,116 @@
+.goods{
+    padding: 100px 0;
+
+    .container{
+        display: flex;
+    }
+
+    &__items{
+        width: 75%;
+    }
+
+    &__head{
+        @include flex(space-between);
+
+        color: $textGray;
+
+        &-filter{
+            position: relative;
+
+            cursor: pointer;
+        }
+
+        &-select{
+            appearance: none;
+            outline: none;
+
+            padding: 5px 40px 5px 0px;
+
+            font-family: 'Poppins';
+
+            border: 0;
+
+            option{
+                font-family: 'Poppins';
+            }
+        }
+
+        &-line{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+
+            width: 100%;
+            height: 1px;
+
+            background: $red;
+        }
+
+        &-icon{
+            position: absolute;
+            right: 5px;
+            top: 5px;
+        }
+    }
+
+    &__list{
+        @include flex(space-around, flex-start, row, wrap);
+
+        padding: $pad 0;
+
+        &-product{
+            width: 30%;
+            text-align: center;
+
+            position: relative;
+
+            @include flex(center, center, column);
+        }
+
+        &-photo{
+            width: 100%;
+            height: fit-content;
+        }
+
+        &-info{
+            padding: $pad/2 0;
+        }
+
+        &-name{
+            font-weight: 500;
+
+            margin-bottom: 10px;
+        }
+
+        &-price{
+            color: $textGray;
+            font-weight: 300;
+        }
+
+        &-sale{
+            @extend %sale;
+
+            background: $saleGreen;
+        }
+        
+        &-sold{
+            @extend %sale;
+
+            background: $soldYellow;
+        }
+
+        &-load{
+            @include flex(center);
+
+            width: 100%;
+        }
+
+        &-more{
+            @extend %button;
+
+            padding: 10px 20px;
+
+            background: $red;
+        }
+    }
+}

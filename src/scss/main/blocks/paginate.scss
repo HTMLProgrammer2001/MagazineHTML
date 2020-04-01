@@ -1,0 +1,47 @@
+.paginate{
+    padding: 60px 0;
+
+    background: $red;
+
+    .container{
+        @include flex(center, center);
+
+        text-align: center;
+        color: #fff;
+    }
+
+    &__name{
+        text-transform: uppercase;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    &__path{
+        @include flex(center);
+    }
+
+    &__item{
+        cursor: pointer;
+
+        font-weight: 300;
+        margin-right: 15px;
+
+        position: relative;
+
+        transition: .3s;
+
+        &::after{
+            content: '/';
+
+            display: block;
+
+            position: absolute;
+            right: -10px;
+            top: 0;
+        }
+
+        &:hover{
+            text-shadow: 0 0 3px #fff;
+        }
+    }
+}
