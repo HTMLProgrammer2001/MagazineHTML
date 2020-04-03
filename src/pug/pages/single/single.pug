@@ -1,0 +1,11 @@
+extends ../../layout.pug
+
+block assets
+    link(href="css/layout.css" rel="stylesheet")
+    link(href="css/single.css" rel="stylesheet")
+
+block content
+    include ../../includes/paginateMixin
+    +paginate(['Home', 'Products', 'Men', 'Biker hoodie'])
+
+    include components/product

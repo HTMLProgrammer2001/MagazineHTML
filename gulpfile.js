@@ -71,7 +71,7 @@ function image() {
 }
 
 function pug() {
-	return gulp.src('./src/pug/*/*.pug', {
+	return gulp.src('./src/pug/pages/*/*.pug', {
 		allowEmpty: true
 	})
 		.pipe(pugCompiler())

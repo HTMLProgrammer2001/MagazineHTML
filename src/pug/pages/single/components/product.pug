@@ -1,0 +1,65 @@
+.product
+    .container
+        .row.space-between
+            .product__images
+                .product__image.product__image_lg
+                    img(src='image/product.png' width="100%")
+
+                .row.space-between
+                    .product__image.product__image_sm
+                        img(src='image/product.png' width="100%")
+
+                    .product__image.product__image_sm
+                        img(src='image/product.png' width="100%")
+
+                    .product__image.product__image_sm
+                        img(src='image/product.png' width="100%")
+
+
+            .product__info
+                .row.space-between
+                    .product__name Biker hoodie
+                    .product__price $24.00
+
+                .product__description.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur at consectetur cum cupiditate dolores doloribus exercitationem explicabo fuga fugiat ipsum iusto, labore natus nisi tempore, tenetur ullam ut veniam!
+
+                .row.space-between
+                    .product__size.row
+                        p Size:
+
+                        ul.product__size-list
+                            li.product__size-item XS
+                            li.product__size-item S
+                            li.product__size-item.product__size-item_active M
+                            li.product__size-item L
+
+                    .product__color.row
+                        p Color:
+
+                        .goods__color.goods__color_sm
+                            .goods__color-item.goods__color-item_red
+                            .goods__color-item.goods__color-item_green
+                            .goods__color-item.goods__color-item_blue
+                            .goods__color-item.goods__color-item_purple.goods__color-item_active
+                            .goods__color-item.goods__color-item_yellow
+                            .goods__color-item.goods__color-item_black
+
+                .product__order
+                    .product__quantity
+                        b.product__quantity-head Quantity
+                        input(type='number').product__quantity-count
+
+                    .product__actions
+                        .product__like
+                            i.fas.fa-heart
+
+                        .product__add Add to cart
+
+                .product__categories
+                    b Categories:
+                    span.ml-1 Fashion, Men clothes
+
+                .product__categories
+                    b Tags:
+                    span.ml-1 Fashion, Men clothes

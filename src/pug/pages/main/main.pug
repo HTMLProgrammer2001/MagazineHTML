@@ -1,10 +1,12 @@
-extends ../layout.pug
+extends ../../layout.pug
 
 block assets
+    link(href="css/layout.css" rel="stylesheet")
     link(href="css/main.css" rel="stylesheet")
 
 block content
-    include components/paginate
+    include ../../includes/paginateMixin
+    +paginate(['Home', 'Products'])
 
     .goods
         .container

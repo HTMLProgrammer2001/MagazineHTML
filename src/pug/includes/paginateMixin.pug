@@ -1,0 +1,10 @@
+mixin paginate(pages)
+    .paginate
+        .container
+            .paginate__content
+                .paginate__name SHOP SIDEBAR
+                .paginate__path
+
+                    each page in pages
+                        .paginate__item=page
+
