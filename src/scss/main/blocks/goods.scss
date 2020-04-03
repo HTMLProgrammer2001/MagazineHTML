@@ -111,6 +111,10 @@
             padding: 10px 20px;
 
             background: $red;
+
+            &:hover{
+                background: darken($red, 15%);
+            }
         }
     }
 }
