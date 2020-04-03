@@ -1,0 +1,87 @@
+.subscribe{
+    background: #fafafa;
+
+    &__wrap{
+
+        padding: $pad;
+
+        @include flex(center, center);
+    }
+
+    &__content{
+        @include flex(center, center, column);
+
+        width: 75%;
+    }
+
+    &__head{
+        font-weight: 700;
+        font-size: 2.5rem;
+    }
+
+    &__desc{
+        color: $gray;
+    }
+
+    &__form{
+        margin: $pad 0;
+        width: 100%;
+
+        @include flex(center, center);
+    }
+
+    &__form-wrap{
+        width: 100%;
+        position: relative;
+    }
+
+    &__icon{
+        position: absolute;
+        left: 10px;
+        top: 10px;
+
+        color: $textGray;
+        font-size: 1.2rem;
+    }
+
+    &__email{
+        padding: 10px 10px 10px 40px;
+        width: 100%;
+
+        font-size: 1rem;
+
+        border-radius: 5px;
+        border: 1px solid $textGray;
+        outline: none;
+
+        &:focus{
+            border: 1px solid $red;
+
+            box-shadow: 0 0 3px $red;
+        }
+    }
+
+    &__but{
+        width: 100px;
+        height: 40px;
+
+        border-radius: 0 5px 5px 0;
+
+        @include flex(center, center);
+
+        position: relative;
+        left: -8px;
+
+        font-size: .8rem;
+        color: #fff;
+
+        background: $red;
+
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover{
+            background: darken($red, 15%);
+        }
+    }
+}
