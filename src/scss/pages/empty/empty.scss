@@ -1,0 +1,20 @@
+@import '../../includes/general';
+
+.empty__back{
+    appearance: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+
+    background: $red;
+
+    margin-top: 20px;
+    padding: 10px 40px;
+
+    color: #fff;
+
+    &:hover{
+        background: darken($red, 15%);
+    }
+}

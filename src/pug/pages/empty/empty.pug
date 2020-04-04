@@ -1,0 +1,15 @@
+extends ../../layout.pug
+
+block assets
+    link(href="css/layout.css" rel="stylesheet")
+    link(href="css/empty.css" rel="stylesheet")
+
+block content
+    include ../../includes/paginateMixin
+    +paginate(['Home', 'Cart empty'])
+
+    .empty.my-pad
+        .container
+            .empty__text Your cart is current empty
+            a(href='/main.html')
+                button.empty__back Return to shop
