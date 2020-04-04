@@ -6,5 +6,5 @@ mixin paginate(pages)
                 .paginate__path
 
                     each page in pages
-                        .paginate__item=page
+                        a(href='#').paginate__item=page
 

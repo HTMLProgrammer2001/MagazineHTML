@@ -84,29 +84,29 @@
             &>i{
                 width: 10%;
             }
+        }
 
-            &>span{
-                position: relative;
+        &-link{
+            position: relative;
 
-                &::after{
-                    content: '';
+            &::after{
+                content: '';
 
-                    display: block;
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
+                display: block;
+                position: absolute;
+                bottom: 0;
+                left: 0;
 
-                    width: 0;
-                    height: 2px;
+                width: 0;
+                height: 2px;
 
-                    background: #000;
+                background: #000;
 
-                    transition: .3s;
-                }
+                transition: .3s;
+            }
 
-                &:hover::after{
-                    width: 100%;
-                }
+            &:hover::after{
+                width: 100%;
             }
         }
     }

@@ -1,0 +1,23 @@
+.reviews.my-pad
+    .container
+        .reviews__head Reviews
+
+        .reviews__form
+            .row
+                img(src='./image/ava.png').reviews__ava
+
+                .reviews__wrap
+                    include reviews_mark.html
+
+                    .reviews__comment
+                        div.reviews__name
+                            input(required).reviews__name-input
+                            label.reviews__name-label Email
+                            .reviews__name-line
+
+                        div.reviews__name
+                            textarea(required rows=1)#message.reviews__name-input
+                            label.reviews__name-label Message
+                            .reviews__name-line
+
+                        button.reviews__but Send

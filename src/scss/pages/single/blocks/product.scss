@@ -85,11 +85,33 @@
         }
     }
 
-    &__order{
-        margin: $pad 0;
-        padding: 20px;
+    &__categories{
+        &-item{
+            text-shadow: 0 0 0 transparentize(black, .5);
+            transition: .3s;
 
-        border-radius: 5px;
-        box-shadow: 3px 3px 20px rgba(0, 0, 0, .1), 1px 1px 3px rgba(0, 0, 0, .3);
+            &:hover{
+                text-shadow: 0 0 1px transparentize(black, .5);
+            }
+        }
+    }
+
+    &__share{
+        &-soc{
+            margin: 0 10px;
+
+            cursor: pointer;
+            transition: .3s;
+
+            font-size: 1.2rem;
+
+            &:hover{
+                color: $red;
+            }
+        }
+    }
+
+    &__mark{
+        @include flex(space-between, center);
     }
 }

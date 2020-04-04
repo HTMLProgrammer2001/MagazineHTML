@@ -1,0 +1,99 @@
+.order{
+    margin: $pad 0;
+    padding: 20px;
+
+    border-radius: 5px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, .1), 1px 1px 3px rgba(0, 0, 0, .3);
+
+    //order__quantity
+    &__quantity{
+        user-select: none;
+
+        &-head{
+            font-weight: bold;
+
+            margin-right: 10px;
+        }
+
+        &-count{
+            appearance: none;
+
+            padding: 10px 40px;
+            position: relative;
+
+            border: 1px solid $textGray;
+            border-radius: 5px;
+
+            outline: none;
+
+            &:focus{
+                border: 1px solid $red;
+                box-shadow: 0 0 3px $red;
+            }
+
+            &::before, &::after{
+                display: block;
+                position: absolute;
+
+                cursor: pointer;
+
+                font-size: 1.5rem;
+            }
+
+            &::before{
+                content: '-';
+
+                top: 5px;
+                left: 10px;
+            }
+
+            &::after{
+                content: '+';
+
+                top: 5px;
+                right: 10px;
+            }
+        }
+    }
+
+    //order actions
+    &__actions{
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    &__like{
+        padding: 10px;
+
+        border: 1px solid $textGray;
+        border-radius: 5px;
+        margin-right: 1rem;
+
+        transition: .3s;
+        cursor: pointer;
+
+        &:hover{
+            border: 1px solid $red;
+
+            background: $red;
+            color: #fff;
+        }
+    }
+
+    &__add{
+        border-radius: 5px;
+        padding: 10px;
+
+        color: #fff;
+        text-transform: uppercase;
+
+        background: $red;
+
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover{
+            background: darken($red, 15%);
+        }
+    }
+}

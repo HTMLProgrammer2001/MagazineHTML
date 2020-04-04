@@ -21,7 +21,7 @@ const webpack = require('webpack');
 sass.compiler = require('node-sass');
 
 function scss(){
-	return gulp.src('./src/scss/*/*.scss', {
+	return gulp.src('./src/scss/pages/*/*.scss', {
 		allowEmpty: true
 	})
 		.pipe(sourceMap.init())

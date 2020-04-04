@@ -10,12 +10,23 @@
                 .footer__links-head Useful links
 
                 ul.footer__links-list
-                    li.footer__links-item Home
-                    li.footer__links-item Checkout
-                    li.footer__links-item My account
-                    li.footer__links-item Man fashion
-                    li.footer__links-item Women fashion
-                    li.footer__links-item Cart
+                    a(href='#').footer__links-item
+                        li Home
+
+                    a(href='#').footer__links-item
+                        li Checkout
+
+                    a(href='#').footer__links-item
+                        li My account
+
+                    a(href='#').footer__links-item
+                        li Man fashion
+
+                    a(href='#').footer__links-item
+                        li Women fashion
+
+                    a(href='#').footer__links-item
+                        li Cart
 
             .footer__contacts
                 .footer__links-head Contact us
@@ -23,15 +34,15 @@
                 .footer__contacts-list
                     .footer__contacts-item
                         i.fas.fa-envelope
-                        span cssuperpy@gmail.com
+                        a(href='mailto:cssuperpy@gmail.com').footer__contacts-link cssuperpy@gmail.com
 
                     .footer__contacts-item
                         i.fas.fa-phone-alt
-                        span +7043345435543
+                        a(href='tel:+7043345544').footer__contacts-link +7043345435543
 
                     .footer__contacts-item
                         i.fas.fa-link
-                        span htmlprogrammer.ru
+                        a(href='#').footer__contacts-link htmlprogrammer.ru
 
     hr
     .footer__copy Copyright 2020

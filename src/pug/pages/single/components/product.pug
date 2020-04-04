@@ -45,21 +45,29 @@
                             .goods__color-item.goods__color-item_yellow
                             .goods__color-item.goods__color-item_black
 
-                .product__order
-                    .product__quantity
-                        b.product__quantity-head Quantity
-                        input(type='number').product__quantity-count
+                .my-pad
+                    include order
 
-                    .product__actions
-                        .product__like
-                            i.fas.fa-heart
+                .product__share
+                    b Share in:
 
-                        .product__add Add to cart
+                    i.fab.fa-facebook-f.product__share-soc
+                    i.fab.fa-twitter.product__share-soc
+                    i.fab.fa-pinterest-p.product__share-soc
 
                 .product__categories
                     b Categories:
-                    span.ml-1 Fashion, Men clothes
+                    span.ml-1
+                        a(href='#').product__categories-item Fashion, &nbsp;
+                        a(href='#').product__categories-item Men clothes
 
                 .product__categories
                     b Tags:
-                    span.ml-1 Fashion, Men clothes
+                    span.ml-1
+                        a(href='#').product__categories-item Fashion, &nbsp;
+                        a(href='#').product__categories-item Men clothes
+
+                .product__mark.my-pad
+                    b.product__mark-head Average mark:
+
+                    include reviews_mark.html

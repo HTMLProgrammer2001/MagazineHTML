@@ -2,8 +2,8 @@
     .goods__head
         .goods__head-count.
             Showing 1-9 of 21 products
-        .goods__head-filter
-            select.goods__head-select
+        .goods__head-filter.cur
+            select.goods__head-select.cur
                 option(selected) Featured products
                 option All
 
@@ -12,35 +12,14 @@
 
     .goods__list
         .goods__list-product
-            img(src="image/product.png").goods__list-photo
+            a(href='#' style='width:100%')
+                img(src="image/product.png").goods__list-photo
 
             .goods__list-info
-               .goods__list-name The Frog T-Shirt
+                .goods__list-name The Frog T-Shirt
                 .goods__list-price
                        |$30 -
                        s $50
-
-            .goods__list-sale Sale
-
-        .goods__list-product
-            img(src="image/product.png").goods__list-photo
-
-            .goods__list-info
-                .goods__list-name The Frog T-Shirt
-                .goods__list-price
-                   | $30 -
-                   s $50
-
-            .goods__list-sale Sale
-
-        .goods__list-product
-            img(src="image/product.png").goods__list-photo
-
-            .goods__list-info
-                .goods__list-name The Frog T-Shirt
-                .goods__list-price
-                    | $30 -
-                    s $50
 
             .goods__list-sale Sale
 

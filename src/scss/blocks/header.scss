@@ -1,4 +1,4 @@
-@import 'general';
+@import '../includes/general';
 
 .header{
     .container{
@@ -47,6 +47,8 @@
         font-family: 'Poppins';
         font-weight: 500;
 
+        color: black;
+        text-decoration: none;
         text-transform: uppercase;
 
         position: relative;
