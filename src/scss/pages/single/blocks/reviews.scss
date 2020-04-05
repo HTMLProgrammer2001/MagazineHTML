@@ -8,8 +8,8 @@
     }
 
     &__ava{
-        max-width: 50px;
-        max-height: 50px;
+        max-width: 75px;
+        max-height: 75px;
 
         margin-right: 2rem;
     }
@@ -34,66 +34,10 @@
         @include flex(flex-start, flex-start, column);
     }
 
-    &__name{
-        margin-top: 30px;
-        width: 100%;
-        position: relative;
-
-        &-input{
-            appearance: none;
-            outline: none;
-            resize: none;
-
-            padding: 10px;
-            width: 100%;
-
-            font-size: 1rem;
-            font-weight: 300;
-
-            border: none;
-            border-bottom: 1px solid $textGray;
-
-            &:valid + .reviews__name-label, &:focus + .reviews__name-label{
-                top: -15px;
-                font-size: .8rem;
-            }
-        }
-
-        &-line{
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 0;
-            height: 1px;
-
-            background: $red;
-
-            transition: .3s;
-        }
-
-        &-input:focus ~ &-line{
-            left: 0;
-            width: 100%;
-        }
-
-        &-label{
-            position: absolute;
-            top: 10px;
-            left: 10px;
-
-            transition: .3s;
-        }
-    }
-
     &__but{
-        margin-top: 20px;
+        @extend %button;
 
-        appearance: none;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        outline: none;
-        transition: .3s;
+        margin-top: 20px;
 
         padding: 10px 40px;
 

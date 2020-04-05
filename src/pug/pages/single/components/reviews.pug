@@ -10,14 +10,21 @@
                     include reviews_mark.html
 
                     .reviews__comment
-                        div.reviews__name
-                            input(required).reviews__name-input
-                            label.reviews__name-label Email
-                            .reviews__name-line
+                        div.input
+                            input(required).input__elem
+                            label.input__label Email
+                            .input__line
 
-                        div.reviews__name
-                            textarea(required rows=1)#message.reviews__name-input
-                            label.reviews__name-label Message
-                            .reviews__name-line
+                        div.input
+                            input(required).input__elem
+                            label.input__label Name
+                            .input__line
+
+                        div.input
+                            textarea(required rows=1)#message.input__elem
+                            label.input__label Message
+                            .input__line
 
                         button.reviews__but Send
+
+        include reviews_list
