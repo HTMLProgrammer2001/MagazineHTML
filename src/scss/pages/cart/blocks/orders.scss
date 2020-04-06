@@ -1,0 +1,97 @@
+.orders{
+    width: 100%;
+    border: 1px solid $textGray;
+
+    text-align: center;
+
+    &__content{
+        margin: 0;
+    }
+
+    &__head{
+        padding: 20px 0;
+        width: 100%;
+        display: flex;
+
+        border-bottom: 1px solid $textGray;
+
+        &-item{
+            width: 15%;
+
+            &_lg{
+                width: 40%;
+            }
+        }
+    }
+
+    &__item{
+        display: flex;
+        padding: $pad/2;
+
+        &>*{
+            width: 15%;
+
+            @include flex(center, center);
+        }
+    }
+
+    &__product{
+        @include flex(center, center);
+
+        width: 40%;
+    }
+
+    &__img{
+        margin-right: 20px;
+
+        max-width: 200px;
+    }
+
+    &__name{
+        padding-bottom: 10px;
+    }
+
+    &__color{
+        @include flex(center, center);
+
+        &>.goods__color-item{
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+    &__actions{
+        width: 100%;
+        padding: 0 10px;
+
+        @include flex(space-between);
+    }
+
+    &__clear, &__update{
+        border-bottom: 1px dashed black;
+
+        position: relative;
+        transition: .3s;
+        cursor: pointer;
+
+        &::before{
+            content: '';
+
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+
+            display: block;
+            height: 1px;
+            width: 0;
+
+            transition: .3s;
+            z-index: 10;
+            background: #000;
+        }
+
+        &:hover::before{
+            width: 100%;
+        }
+    }
+}

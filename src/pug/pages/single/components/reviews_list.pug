@@ -9,36 +9,48 @@
                 .reviews-list__icons
                     i.fas.fa-link.reviews-list__icon
                     i.fas.fa-exclamation-triangle.reviews-list__icon
+
+            .my-1
+                include reviews_mark.html
+
             .reviews-list__message
                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium cumque et fuga hic ipsum maxime minus modi molestias nesciunt nobis pariatur perferendis quam quasi quis tempora tenetur totam, vitae!
 
-    span(id='comment_23')
-    .reviews-list__item.row
-        img(src='./image/ava.png').reviews__ava
+            .reviews-list__item-footer
+                .reviews-list__item-mark
+                    span -
+                    span 0
+                    span +
 
-        .reviews-list__wrap
-            .reviews-list__name
-                p Yura
-                .reviews-list__icons
-                    i.fas.fa-link.reviews-list__icon
-                    i.fas.fa-exclamation-triangle.reviews-list__icon
-            .reviews-list__message
-                a(href='#comment_24').reviews-list__answer.
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium cumque et fuga hic ipsum maxime minus modi molestias nesciunt nobis pariatur perferendis quam quasi quis tempora tenetur totam, vitae!
+                .reviews-list__item-date
+                    | 20.03.2020 19:57
 
-    span(id='comment_22')
-    .reviews-list__item.row
-        img(src='./image/ava.png').reviews__ava
+    span(id='comment_24')
+        .reviews-list__item.row
+            img(src='./image/ava.png').reviews__ava
 
-        .reviews-list__wrap
-            .reviews-list__name
-                p Yura
-                .reviews-list__icons
-                    i.fas.fa-link.reviews-list__icon
-                    i.fas.fa-exclamation-triangle.reviews-list__icon
-            .reviews-list__message
-                a(href='#comment_24').reviews-list__answer
-                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                p
-                    |Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium cumque et fuga hic ipsum maxime minus modi molestias nesciunt nobis pariatur perferendis quam quasi quis tempora tenetur totam, vitae!
+            .reviews-list__wrap
+                .reviews-list__name
+                    p Yura
+                    .reviews-list__icons
+                        i.fas.fa-link.reviews-list__icon
+                        i.fas.fa-exclamation-triangle.reviews-list__icon
+
+                .my-1
+                    include reviews_mark.html
+
+                .reviews-list__message
+                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium cumque et fuga hic ipsum maxime minus modi molestias nesciunt nobis pariatur perferendis quam quasi quis tempora tenetur totam, vitae!
+
+                .reviews-list__item-footer
+                    .reviews-list__item-mark
+                        span -
+                        span 0
+                        span +
+
+                    .reviews-list__item-date
+                        | 20.03.2020 19:57
+
+
+.load
+    button.load__more Load More

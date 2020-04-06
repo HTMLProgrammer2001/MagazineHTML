@@ -85,6 +85,10 @@ body{
     margin: 0 auto;
 }
 
+.mb-10{
+    margin-bottom: 10px;
+}
+
 .cur{
     cursor: pointer;
 }
@@ -114,6 +118,10 @@ a{
     margin: $pad;
 }
 
+.my-1{
+    padding: 1rem 0;
+}
+
 .my-pad{
     margin: $pad 0;
 }
@@ -123,6 +131,4 @@ a{
 }
 
 //styles
-@import './goods__color.scss';
-@import './goods__list.scss';
 @import './input.scss';

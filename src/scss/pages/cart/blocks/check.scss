@@ -1,0 +1,29 @@
+.check{
+    width: 100%;
+    @include flex(center, flex-end, column);
+
+    &__head{
+        display: block;
+    }
+
+    &__box{
+        width: 40%;
+        padding: 20px;
+
+        border-radius: 5px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, .1), 1px 1px 3px rgba(0, 0, 0, .3);
+    }
+
+    &__but{
+        @extend %button;
+
+        padding: 10px 20px;
+
+        background: $red;
+        transition: .3s;
+
+        &:hover{
+            background: darken($red, 15%);
+        }
+    }
+}

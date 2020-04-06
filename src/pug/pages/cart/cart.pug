@@ -5,10 +5,7 @@ block assets
 
 block content
     include ../../includes/paginateMixin
-    +paginate(['Home', 'Products'])
+    +paginate(['Home', 'Cart'])
 
-    .goods
-        .container
-            include components/goods
-
-            include components/goodsForm
+    include components/orders
+    include components/check

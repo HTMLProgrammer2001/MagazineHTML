@@ -3,6 +3,19 @@
         padding: 20px 0;
 
         border-bottom: 1px solid $textGray;
+
+        &-footer{
+            @include flex(space-between);
+            color: $textGray;
+        }
+
+        &-mark{
+            cursor: pointer;
+        }
+
+        &-mark>*{
+            margin: 0 5px;
+        }
     }
 
     &__name{
@@ -15,22 +28,9 @@
 
         @include flex(space-between, center);
 
-        margin-bottom: 10px;
-
         & p{
           margin: 0;
         }
-    }
-
-    &__answer{
-        border-left: 5px solid #6299c5;
-
-        padding: 20px;
-        margin-left: 20px;
-        display: block;
-
-        color: $gray;
-        font-style: italic;
     }
 
     &__icon{
@@ -47,4 +47,22 @@
 
 :target + .reviews-list__item{
     border-bottom: 1px solid $red;
+}
+
+.load{
+    @include flex(center, center);
+
+    &__more{
+        @extend %button;
+
+        padding: 10px 40px;
+
+        background: $red;
+
+        transition: .3s;
+
+        &:hover{
+            background: darken($red, 15%);
+        }
+    }
 }

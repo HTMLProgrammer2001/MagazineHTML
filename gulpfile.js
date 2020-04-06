@@ -34,6 +34,7 @@ function scss(){
 			dirname: './',
 			extname: '.css'
 		})))
+		.pipe(concat('bundle.css'))
 		.pipe(gulp.dest('./dist/css/'))
 		.pipe(browserSync.stream());
 }
