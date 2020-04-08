@@ -1,0 +1,79 @@
+.container
+    .billing.my-pad
+        .billing__head Billing Details
+
+        .billing__form
+            .row
+                div.input.mr-1
+                    input(required).input__elem
+                    label.input__label
+                        span First Name
+                        span.red *
+                    .input__line
+
+                div.input.ml-1
+                    input(required).input__elem
+                    label.input__label
+                        span Last Name
+                        span.red *
+                    .input__line
+
+            div.input
+                input(required).input__elem
+                label.input__label
+                    span Company Name
+                .input__line
+
+            div.input
+                input(required).input__elem
+                label.input__label
+                    span Country
+                    span.red *
+                .input__line
+
+            .row
+                div.input.mr-1
+                    input(required).input__elem
+                    label.input__label
+                        span Town / City
+                        span.red *
+                    .input__line
+
+                div.input.ml-1
+                    input(required).input__elem
+                    label.input__label
+                        span Postcode / Zip
+                    .input__line
+
+            div.input
+                input(required).input__elem
+                label.input__label
+                    span Street Address
+                    span.red *
+                .input__line
+
+            div.input
+                input(required).input__elem
+                label.input__label
+                    span Phone
+                    span.red *
+                .input__line
+
+            div.input
+                input(required).input__elem
+                label.input__label
+                    span Email Address
+                    span.red *
+                .input__line
+
+            div.checkbox
+                input(type = "checkbox" id="create").checkbox__elem
+                label(for="create").checkbox__label
+                    span Create an account?
+
+            div Order Notes
+            .text-muted Notes about your order like delivery species e.g.
+
+            div.input
+                textarea(required rows=1)#message.input__elem
+                .input__line

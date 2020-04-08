@@ -17,6 +17,8 @@
         border: none;
         border-bottom: 1px solid $textGray;
 
+        background: transparent;
+
         &:valid + .input__label, &:focus + .input__label{
             top: -15px;
             font-size: .8rem;
@@ -46,5 +48,6 @@
         left: 10px;
 
         transition: .3s;
+        z-index: -1;
     }
 }

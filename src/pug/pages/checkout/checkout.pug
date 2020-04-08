@@ -1,0 +1,12 @@
+extends ../../layout.pug
+
+block assets
+    link(href="css/bundle.css" rel="stylesheet")
+
+block content
+    include ../../includes/paginateMixin
+    +paginate(['Home', 'Checkout'])
+
+    include ./components/questions
+    include ./components/billing
+    include ./components/payment

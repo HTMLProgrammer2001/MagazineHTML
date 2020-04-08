@@ -1,0 +1,61 @@
+.container
+    .payment.my-pad.row
+        .payment__order
+            .payment__head My Order
+
+            .payment__order-list
+                .payment__order-item
+                    b Product
+                    b Total
+
+                .payment__order-item
+                    span Fine Knit Hat x1
+                    span $45.00
+
+                .payment__order-item
+                    span Fine Knit Hat x1
+                    span $45.00
+
+                .payment__order-item
+                    span Shipping
+                    span FREE SHIPPING
+
+                .payment__order-item
+                    b Total
+                    b $90.00
+
+
+        .payment__types
+            .payment__head Payment
+
+            .payment__type
+                .radio
+                    input(type = "radio" id="paypal" name="payment" checked="").radio__elem
+                    label(for="paypal").radio__label
+                        span Paypal
+
+                .payment__content
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda at atque culpa dolore dolorem esse eum facere laboriosam minima modi natus neque odio, officiis reiciendis ullam voluptas voluptatem voluptatibus?
+
+            .payment__type
+                .radio
+                    input(type = "radio" id="bank" name="payment").radio__elem
+                    label(for="bank").radio__label
+                        span Direct Bank Transfer
+
+                .payment__content
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda at atque culpa dolore dolorem esse eum facere laboriosam minima modi natus neque odio, officiis reiciendis ullam voluptas voluptatem voluptatibus?
+
+            .payment__type
+                .radio
+                    input(type = "radio" id="deliver" name="payment").radio__elem
+                    label(for="deliver").radio__label
+                        span Carsh on delivery
+
+                .payment__content
+                    | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam assumenda at atque culpa dolore dolorem esse eum facere laboriosam minima modi natus neque odio, officiis reiciendis ullam voluptas voluptatem voluptatibus?
+
+
+    .space-between.row.mb-10
+        div
+        button.check__but Place order

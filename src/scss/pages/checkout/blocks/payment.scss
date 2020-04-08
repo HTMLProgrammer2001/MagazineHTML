@@ -1,0 +1,29 @@
+.payment{
+    &>*{
+        width: 50%;
+    }
+
+    &__head{
+        font-size: 1.5rem;
+        font-weight: 700;
+
+        margin-bottom: 15px;
+    }
+
+    &__order{
+        &-list{
+            margin-right: 2rem;
+        }
+
+        &-item{
+            @include flex(space-between, center);
+            padding: 10px;
+
+            border-bottom: 1px solid $textGray;
+
+            &:last-child{
+                border: none;
+            }
+        }
+    }
+}
