@@ -159,6 +159,19 @@ a{
     transition: .3s;
 }
 
+.w-100{
+    width: 100%;
+}
+
+.w-50{
+    width: 50%;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
 //styles
 @import './input';
 @import './checkbox';

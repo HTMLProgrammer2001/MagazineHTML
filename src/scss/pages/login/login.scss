@@ -1,0 +1,12 @@
+@import '../../includes/general';
+
+.login{
+    @include flex(center, flex-start, column);
+
+    &__head{
+        font: {
+            size: 2rem;
+            weight: 700;
+        }
+    }
+}

@@ -1,0 +1,5 @@
+@import '../../includes/general';
+
+.reset{
+    @include flex(center, center, column);
+}

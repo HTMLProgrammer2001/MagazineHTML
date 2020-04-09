@@ -1,0 +1,23 @@
+extends ../../layout.pug
+
+block assets
+    link(href="css/bundle.css" rel="stylesheet")
+
+block content
+    include ../../includes/paginateMixin
+    +paginate(['Home', 'Reset'])
+
+    .reset
+        .container.my-pad
+            .login__head Reset password
+
+            div.input
+                input(required).input__elem
+                label.input__label
+                    span Email
+                    span.red *
+                .input__line
+
+            .row.space-between.my-pad.w-100
+                div
+                button.check__but Reset
