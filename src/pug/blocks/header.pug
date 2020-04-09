@@ -5,15 +5,51 @@ header.header
 
         nav.header__menu
             a(href='#').header__item Home
-            a(href='#').header__item Men
-            a(href='#').header__item Women
-            a(href='#').header__item Shop
-            a(href='#').header__item Pages
-            a(href='#').header__item.bord Blog
+            a(href='#').header__item Categories
+            a(href='#').header__item Profile
 
-            span.header__icon.header__icon_badge
-                i.fas.fa-shopping-bag
+            span.header__icon.header__icon_badge.dropdown.active
+                i.fas.fa-shopping-bag.dropdown__elem
                 span.badge 5
 
-            span.header__icon
-                i.fas.fa-search
+                div.dropdown__body
+                    ul.header__product-list
+                        li.header__product-item
+                            span T-Shirt x 2
+                            span $90.00
+                            span &times;
+
+                        li.header__product-item
+                            span T-Shirt x 2
+                            span $90.00
+                            span &times;
+
+                        li.header__product-item
+                            span T-Shirt x 2
+                            span $90.00
+                            span &times;
+
+                        li.header__product-item
+                            b Total
+                            span
+                            b $270.00
+                    .row.space-between.w-100
+                        span
+                        button.check__but.sm Checkout
+
+            span.header__icon.dropdown
+                i.fas.fa-search.dropdown__elem
+
+                div.dropdown__body
+                    div.input
+                        input(required).input__elem
+                        label.input__label
+                            span Search
+                            span.red *
+                        .input__line
+
+            .burger.header__icon
+                div.burger__body
+                    span.burger__item
+                    span.burger__item
+                    span.burger__item
