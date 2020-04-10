@@ -24,11 +24,9 @@ function scss(){
 	return gulp.src('./src/scss/pages/*/*.scss', {
 		allowEmpty: true
 	})
-		.pipe(sourceMap.init())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(autoprefixer())
 		.pipe(cleanCSS())
-		.pipe(sourceMap.write())
 		.pipe(rename((path) => ({
 			basename: path.basename,
 			dirname: './',
@@ -47,7 +45,10 @@ function js(mode){
 			.pipe(eslint())
 			.pipe(eslint.formatEach('compact', process.stderr))
 			.pipe(eslint.failAfterError())
-			.pipe(sourceMap.init())
+			.pipe(mode === 'production' ?
+				sourceMap.init() :
+				through.obj((chunk, enc, cb) =>
+					cb(null, chunk)))
 			.pipe(webpackStream({
 				...webpackConfig,
 				mode
@@ -58,7 +59,10 @@ function js(mode){
 				through.obj((chunk, enc, cb) =>
 					cb(null, chunk))
 			)
-			.pipe(sourceMap.write())
+			.pipe(mode === 'production' ?
+				sourceMap.write() :
+				through.obj((chunk, enc, cb) =>
+					cb(null, chunk)))
 			.pipe(gulp.dest('./dist/js'))
 			.pipe(browserSync.stream());
 	};

@@ -1,0 +1,16 @@
+//footer
+@media all and(max-width: 700px){
+    .footer__content{
+        flex-direction: column;
+
+        &>*{
+            width: 100%;
+        }
+    }
+}
+
+@media all and(max-width: 320px) {
+    .footer__links-item{
+        width: 100%;
+    }
+}

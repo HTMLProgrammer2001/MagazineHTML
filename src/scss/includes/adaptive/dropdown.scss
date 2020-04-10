@@ -1,0 +1,19 @@
+@media all and(max-width: 500px) {
+    .dropdown{
+        &__body{
+            right: calc(50% - 100px);
+
+            &::before{
+                display: none;
+            }
+
+            &::after{
+                display: none;
+            }
+        }
+    }
+
+    &.active{
+        z-index: 999;
+    }
+}

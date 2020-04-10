@@ -15,6 +15,8 @@ $('.dropdown__elem').on('click', function(){
 
 $('.burger').on('click', function(){
 	$(this).toggleClass('active');
+
+	$('.header__links').toggleClass('active');
 });
 
 autosize(document.getElementById('message'));

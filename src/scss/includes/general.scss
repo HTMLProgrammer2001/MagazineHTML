@@ -72,6 +72,7 @@ body{
     margin: 0;
 
     height: 100vh;
+    width: 100%;
 
     font-size: 16px;
     font-family: 'Poppins';
@@ -178,8 +179,8 @@ a{
 }
 
 //styles
-@import './input';
-@import './checkbox';
-@import './radio';
-@import './dropdown';
-@import './adaptive';
+@import 'items/input';
+@import 'items/checkbox';
+@import 'items/radio';
+@import 'items/dropdown';
+@import 'adaptive/main';

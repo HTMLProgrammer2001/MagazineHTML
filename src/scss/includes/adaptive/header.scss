@@ -1,0 +1,24 @@
+@media all and(max-width: 500px){
+    .header{
+        .container{
+            @include flex(center, center, column);
+
+            margin-bottom: $pad;
+        }
+
+        &__icons{
+            display: block;
+
+            margin-bottom: $pad;
+        }
+
+        &__menu{
+            flex-direction: column;
+        }
+
+        &__links{
+            top: calc(100% + 40px);
+            right: calc(50% - 100px);
+        }
+    }
+}

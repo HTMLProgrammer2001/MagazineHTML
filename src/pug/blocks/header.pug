@@ -4,49 +4,47 @@ header.header
             img.header__logo(src="image/logo.png")
 
         nav.header__menu
-            a(href='#').header__item Home
-            a(href='#').header__item Categories
-            a(href='#').header__item Profile
+            div.header__links
+                a(href='#').header__item Home
+                a(href='#').header__item Categories
+                a(href='#').header__item Profile
 
-            span.header__icon.header__icon_badge.dropdown.active
-                i.fas.fa-shopping-bag.dropdown__elem
-                span.badge 5
+            .header__icons
+                span.header__icon.header__icon_badge.dropdown
+                    i.fas.fa-shopping-bag.dropdown__elem
+                    span.badge 5
 
-                div.dropdown__body
-                    ul.header__product-list
-                        li.header__product-item
-                            span T-Shirt x 2
-                            span $90.00
-                            span &times;
+                    .dropdown__body
+                        .dropdown__content
+                            ul.header__product-list
+                                li.header__product-item
+                                    span T-Shirt x 2
+                                    span $90.00
+                                    span &times;
 
-                        li.header__product-item
-                            span T-Shirt x 2
-                            span $90.00
-                            span &times;
+                                li.header__product-item
+                                    span T-Shirt x 2
+                                    span    $90.00
+                                    span &times;
 
-                        li.header__product-item
-                            span T-Shirt x 2
-                            span $90.00
-                            span &times;
+                                li.header__product-item
+                                    b Total
+                                    span
+                                    b $270.00
+                            .row.space-between.w-100
+                                span
+                                button.check__but.sm Checkout
 
-                        li.header__product-item
-                            b Total
-                            span
-                            b $270.00
-                    .row.space-between.w-100
-                        span
-                        button.check__but.sm Checkout
+                span.header__icon.dropdown
+                    i.fas.fa-search.dropdown__elem
 
-            span.header__icon.dropdown
-                i.fas.fa-search.dropdown__elem
-
-                div.dropdown__body
-                    div.input
-                        input(required).input__elem
-                        label.input__label
-                            span Search
-                            span.red *
-                        .input__line
+                    .dropdown__body
+                        .dropdown__content
+                            .input
+                                input(required).input__elem
+                                label.input__label
+                                    span Search
+                                .input__line
 
             .burger.header__icon
                 div.burger__body
