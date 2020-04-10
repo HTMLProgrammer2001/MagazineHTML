@@ -66,10 +66,25 @@
                     span.red *
                 .input__line
 
-            div.checkbox
+            .checkbox
                 input(type = "checkbox" id="create").checkbox__elem
                 label(for="create").checkbox__label
                     span Create an account?
+
+            .row#createForm.my-pad.hidden
+                div.input.mr-1
+                    input(required).input__elem
+                    label.input__label
+                        span Password
+                        span.red *
+                    .input__line
+
+                div.input.ml-1
+                    input(required).input__elem
+                    label.input__label
+                        span Password confirmation
+                        span.red *
+                    .input__line
 
             div Order Notes
             .text-muted Notes about your order like delivery species e.g.

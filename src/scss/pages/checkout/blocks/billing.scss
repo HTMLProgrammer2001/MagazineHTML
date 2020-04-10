@@ -5,4 +5,24 @@
             size: 2.5rem;
         }
     }
+
+    .row{
+        @media all and (max-width: 450px){
+            flex-direction: column;
+        }
+    }
+
+    @media all and (max-width: 450px){
+        & .row{
+            flex-direction: column;
+        }
+
+        & .mr-1{
+            margin-right: 0;
+        }
+
+        & .ml-1{
+            margin-left: 0;
+        }
+    }
 }

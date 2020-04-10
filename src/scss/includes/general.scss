@@ -160,6 +160,13 @@ a{
     transition: .3s;
 }
 
+.hidden{
+    opacity: 0;
+    transition: .3s;
+
+    display: none;
+}
+
 .w-100{
     width: 100%;
 }

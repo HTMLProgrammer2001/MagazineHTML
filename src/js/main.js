@@ -19,4 +19,20 @@ $('.burger').on('click', function(){
 	$('.header__links').toggleClass('active');
 });
 
+$('#create').on('change', function(){
+	if(this.checked) {
+		$('#createForm').removeClass('hidden');
+	}
+	else {
+		$('#createForm').addClass('hidden');
+	}
+});
+
+$('[name="payment"]').on('click', function(){
+	$('.payment__content').addClass('hidden');
+
+	$(this).closest('.payment__type').find('.payment__content')
+		.removeClass('hidden');
+});
+
 autosize(document.getElementById('message'));
