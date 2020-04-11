@@ -1,4 +1,11 @@
 .goods__form{
+    @media all and(max-width: 700px){
+        order: -1;
+        padding: 0;
+    }
+
+    margin-bottom: $pad;
+
     padding: 0 $pad/2;
 
     &-head{
@@ -44,24 +51,15 @@
 
     &-list{
         list-style: none;
+        user-select: none;
 
         padding: 0 $pad/2;
         margin: 0;
     }
 
     &-item{
-        padding: 5px 0;
-
-        position: relative;
-
-        cursor: pointer;
-
-        &::before{
-            content: '⯈';
-
-            position: absolute;
-
-            left: -20px;
+        .checkbox{
+            margin: 5px 0;
         }
     }
 }
@@ -96,12 +94,34 @@
     width: 100%;
     height: 4px;
 
+    user-select: none;
+
     background: silver;
 
     overflow: visible;
     cursor: pointer;
 
     position: relative;
+
+    &-point{
+        content: '';
+
+        width: 15px;
+        height: 15px;
+
+        border-radius: 50%;
+
+        background: $red;
+
+        position: absolute;
+        top: -6px;
+        left: 40px;
+
+        &.right{
+            right: 50px;
+            left: auto;
+        }
+    }
 
     &-indicator{
        position: absolute;
@@ -111,26 +131,6 @@
        height: 100%;
 
         background: transparentize($red, .4);
-
-        &::before, &::after{
-            content: '';
-
-            width: 15px;
-            height: 15px;
-
-            border-radius: 50%;
-
-            background: $red;
-
-            position: absolute;
-            top: -6px;
-            left: -8px;
-        }
-
-        &::after{
-            left: auto;
-            right: -8px;
-        }
     }
 
     &-range{

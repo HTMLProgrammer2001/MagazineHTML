@@ -1,0 +1,46 @@
+@import '../../includes/general';
+
+.categories{
+    @include flex(space-around, center, row, wrap);
+
+    &__item{
+        @media all and(max-width: 800px){
+            width: 45%;
+        }
+
+        @media all and(max-width: 550px){
+            width: 100%;
+        }
+
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-top: $pad;
+        width: 30%;
+
+        border-radius: 5px;
+        overflow: hidden;
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover{
+            left: 10px;
+            top: -10px;
+        }
+    }
+
+    &__img{
+        width: 100%;
+    }
+
+    &__products{
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+
+        color: #fff;
+
+        font-size: 1.4rem;
+        text-shadow: 0 0 1px #000;
+    }
+}

@@ -4,13 +4,23 @@
 
     .goods__categories
         ul.goods__categories-list
-            li.goods__categories-item T-Shirt
-            li.goods__categories-item T-Shirt
-            li.goods__categories-item T-Shirt
-            li.goods__categories-item T-Shirt
-            li.goods__categories-item T-Shirt
-            li.goods__categories-item T-Shirt
-            li.goods__categories-item T-Shirt
+            li.goods__categories-item
+                .checkbox
+                    label.checkbox__label
+                        input(type = "checkbox" name="create").checkbox__elem
+                        span T-Shirt test
+
+            li.goods__categories-item
+                .checkbox
+                    label.checkbox__label
+                        input(type = "checkbox" name="create").checkbox__elem
+                        span T-Shirt test
+
+            li.goods__categories-item
+                .checkbox
+                    label.checkbox__label
+                        input(type = "checkbox" name="create").checkbox__elem
+                        span T-Shirt test
 
     .goods__form-head
         | Filter by color
@@ -37,7 +47,9 @@
         | Filter by price
 
     .goods__price
+        .goods__price-point.left
         .goods__price-indicator
+        .goods__price-point.right
 
     .goods__price-range Price: $5 - $100
 

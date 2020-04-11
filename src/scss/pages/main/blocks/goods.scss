@@ -3,13 +3,27 @@
 
     .container{
         display: flex;
+
+        @media all and (max-width: 700px){
+            flex-direction: column;
+        }
     }
 
     &__items{
         width: 75%;
+
+        @media all and (max-width: 700px){
+            width: 100%;
+        }
     }
 
     &__head{
+        @media all and(max-width: 820px){
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
         @include flex(space-between);
 
         color: $textGray;
@@ -110,6 +124,14 @@
             position: relative;
 
             @include flex(center, center, column);
+
+            @media all and(max-width: 1000px){
+                width: 47%;
+            }
+
+            @media all and(max-width: 800px){
+                width: 95%;
+            }
         }
 
         &-photo{

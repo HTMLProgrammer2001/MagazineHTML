@@ -7,6 +7,10 @@
 
     //order__quantity
     &__quantity{
+        @media all and(max-width: 319px){
+            @include flex(center, center, column);
+        }
+
         user-select: none;
 
         &-head{
@@ -16,6 +20,10 @@
         }
 
         &-count{
+            @media all and(max-width: 319px){
+                margin-top: 10px;
+            }
+
             appearance: none;
 
             padding: 10px 40px;
@@ -60,9 +68,17 @@
     &__actions{
         justify-content: flex-end;
         align-items: center;
+
+        @media all and(max-width: 319px){
+            flex-direction: column;
+        }
     }
 
     &__like{
+        @media all and(max-width: 319px){
+            margin-bottom: 10px;
+        }
+
         padding: 10px;
 
         border: 1px solid $textGray;

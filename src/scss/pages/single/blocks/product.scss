@@ -1,8 +1,24 @@
 .product{
     padding-top: $pad;
 
+    &__facilities{
+        @media all and(max-width: 1200px){
+            flex-direction: column;
+        }
+    }
+
+    &__content{
+        @media all and(max-width: 600px){
+            flex-direction: column;
+        }
+    }
+    
     &__images{
-        width: 45%;
+        padding-right: 5%;
+
+        @media all and(max-width: 800px) {
+            width: 100%;
+        }
     }
 
     &__image{
@@ -17,13 +33,23 @@
         }
     }
 
-    &__info{
-        width: 45%;
-    }
-
     //Product info
     &__info{
         padding-top: 20px;
+
+        width: 50%;
+
+        @media all and(max-width: 600px){
+            width: 100%;
+        }
+
+        &-head{
+            @media all and(max-width: 319px){
+                flex-direction: column;
+
+                text-align: center;
+            }
+        }
     }
 
     &__name, &__price{

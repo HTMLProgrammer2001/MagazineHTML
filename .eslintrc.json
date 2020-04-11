@@ -34,7 +34,7 @@
         "block-scoped-var": "warn",
         "complexity": [
           "error",
-          5
+          10
         ],
         "no-eval": "error",
         "no-empty-function": "warn",

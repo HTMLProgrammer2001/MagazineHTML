@@ -59,6 +59,8 @@
     &__label{
         margin-left: .5rem;
 
+        @include flex(flex-start, center);
+
         cursor: pointer;
     }
 }

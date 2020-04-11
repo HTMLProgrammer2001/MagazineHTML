@@ -7,6 +7,14 @@
     }
 
     &__box{
+        @media all and(max-width: 800px){
+            width: 75%;
+        }
+
+        @media all and(max-width: 450px){
+            width: 100%;
+        }
+
         width: 40%;
         padding: 20px;
 

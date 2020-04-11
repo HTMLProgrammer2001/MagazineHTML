@@ -1,0 +1,34 @@
+extends ../../layout.pug
+
+block assets
+    link(href="css/bundle.css" rel="stylesheet")
+
+block content
+    include ../../includes/paginateMixin
+    +paginate(['Home', 'Categories'])
+
+    .container
+        .categories.my-pad
+            a(href='#').categories__item
+                img(src="image/product.png").categories__img
+                .categories__products 307 products
+
+            a(href='#').categories__item
+                img(src="image/product.png").categories__img
+                .categories__products 307 products
+
+            a(href='#').categories__item
+                img(src="image/product.png").categories__img
+                .categories__products 307 products
+
+            a(href='#').categories__item
+                img(src="image/product.png").categories__img
+                .categories__products 307 products
+
+            a(href='#').categories__item
+                img(src="image/product.png").categories__img
+                .categories__products 307 products
+
+            a(href='#').categories__item
+                img(src="image/product.png").categories__img
+                .categories__products 307 products

@@ -36,6 +36,10 @@
     }
 
     &__product{
+        @media all and(max-width: 800px){
+            flex-direction: column;
+        }
+
         @include flex(center, center);
 
         width: 40%;
@@ -45,6 +49,7 @@
         margin-right: 20px;
 
         max-width: 200px;
+        width: 50%;
     }
 
     &__name{
@@ -82,7 +87,7 @@
             left: 0;
 
             display: block;
-            height: 1px;
+            height: 2px;
             width: 0;
 
             transition: .3s;

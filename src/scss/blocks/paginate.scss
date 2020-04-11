@@ -17,7 +17,7 @@
     }
 
     &__path{
-        @include flex(center);
+        @include flex(center, center, row, wrap);
     }
 
     &__item{

@@ -1,5 +1,10 @@
 .reviews-list{
     &__item{
+        @media all and(max-width: 600px){
+            flex-direction: column;
+            align-items: center;
+        }
+
         padding: 20px 0;
 
         border-bottom: 1px solid $textGray;
@@ -7,6 +12,11 @@
         &-footer{
             @include flex(space-between);
             color: $textGray;
+
+            @media all and(max-width: 319px){
+                flex-direction: column;
+                align-items: center;
+            }
         }
 
         &-mark{
@@ -53,6 +63,10 @@
     @include flex(center, center);
 
     &__more{
+        @media all and(max-width: 319px){
+            padding: 10px;
+        }
+
         @extend %button;
 
         padding: 10px 40px;
