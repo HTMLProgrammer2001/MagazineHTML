@@ -1,0 +1,103 @@
+.admHeader{
+    padding: 10px 20px;
+    position: relative;
+
+    background: $red;
+    color: #fff;
+
+    @include flex(space-between, center);
+
+    .burger{
+        display: block;
+        margin-right: $pad;
+
+        cursor: pointer;
+        
+        &__item{
+            background: #fff;
+        }
+    }
+
+    .burger.active + &__menu{
+        width: 25vw;
+        min-width: 200px;
+    }
+
+    .row{
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+
+        height: calc(100vh - 100%);
+        width: 0;
+
+        background: $red;
+        overflow: hidden;
+
+        transition: .3s;
+    }
+
+    &__item{
+        position: relative;
+        padding: 15px 20px;
+        width: 100%;
+
+        border-bottom: 1px solid #fff;
+
+        cursor: pointer;
+        transition: .1s;
+
+        &:first-child{
+            border-top: 1px solid #fff;
+        }
+
+        &:hover{
+            background: darken($red, 10%);
+
+            border-left: 3px solid #fff;
+        }
+    }
+
+    &__divider{
+        background: darken($red, 25%);
+
+        width: 100%;
+        padding: 10px 20px;
+
+        text: {
+            transform: uppercase;
+        }
+
+        font: {
+            weight: 300;
+            size: .8rem;
+        }
+    }
+
+    &__user{
+        position: relative;
+
+        @include flex(center, center);
+    }
+
+    &__name{
+        margin-right: $pad/2;
+    }
+
+    &__photo{
+        position: relative;
+        height: 50px;
+
+        border-radius: 50%;
+        overflow: hidden;
+    }
+
+    &__icon{
+        margin-right: 10px;
+    }
+}
