@@ -1,0 +1,4 @@
+.sales__list{
+    width: 100%;
+    @include flex(space-around, center);
+}

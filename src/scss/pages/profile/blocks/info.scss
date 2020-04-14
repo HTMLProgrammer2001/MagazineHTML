@@ -1,0 +1,30 @@
+.info{
+    position: relative;
+
+    &__links{
+        @include flex(space-between, center);
+
+        @media all and(max-width: 550px){
+            flex-direction: column;
+        }
+    }
+
+    &__image{
+        width: 100%;
+        @include flex(center, center);
+
+        overflow: hidden;
+    }
+
+    &__photo{
+        max-width: 50%;
+    }
+    
+    &__fields{
+        text-align: center;
+    }
+
+    &__field{
+        margin: 10px 0;
+    }
+}

@@ -1,0 +1,62 @@
+.billing.py-pad
+    .container
+        .login__head Personal info
+
+        .billing__form
+            .file.my-pad
+                img(src="image/product.png").file_image
+
+                label
+                    input(type="file").file__elem
+
+                    .file__but Select file
+
+            div.input
+                input(required).input__elem
+                label.input__label
+                    span First Name
+                    span.red *
+                .input__line
+
+            div.input
+                input(required).input__elem
+                label.input__label
+                    span Last Name
+                    span.red *
+                .input__line
+
+            div.input
+                input(required).input__elem
+                label.input__label
+                    span Email Address
+                    span.red *
+                .input__line
+
+            .row.space-between.my-pad.w-100
+                div
+                button.check__but Update
+
+
+            .login__head Security
+
+            div.input
+                input(required type="password").input__elem
+                label.input__label
+                    span Password
+                .input__line
+
+            div.input
+                input(required type="password").input__elem
+                label.input__label
+                    span Password confirmation
+                .input__line
+
+        .row.space-between.my-pad.w-100
+            div
+            button.check__but Update
+
+        .login__head Delete account
+
+        .row.space-between.my-pad.w-100
+            div
+            button.check__but Delete

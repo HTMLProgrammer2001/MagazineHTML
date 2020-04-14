@@ -9,7 +9,7 @@
         .admHeader__menu
             .admHeader__divider Navigation menu
 
-            .admHeader__item
+            .admHeader__item.admHeader__item_active
                 i.fas.fa-user.admHeader__icon
                 span Profile
             .admHeader__item
@@ -25,9 +25,21 @@
                 i.fas.fa-envelope.admHeader__icon
                 span Subscribes
 
-        img(src="image/adminLogo.png")
+        img(src="image/adminLogo.png").admHeader__logo
 
-    .row
-        .admHeader__user
-            .admHeader__name Yuri Prisyazhny
+    .row.cur.dropdown
+        .admHeader__user.dropdown__elem
+            .admHeader__name
+                span Yuri Prisyazhny
+
             img(src="image/ava.png").admHeader__photo
+            i.fas.fa-sort-down.ml-1
+
+        .dropdown__body
+            .dropdown__content
+                ul.menu__list
+                    li.menu__item Profile
+                    li.menu__item Settings
+                    li.menu__item Orders
+                    li.menu__item Favorite
+                    li.menu__item Log out

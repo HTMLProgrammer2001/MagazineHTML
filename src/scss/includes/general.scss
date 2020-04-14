@@ -129,6 +129,10 @@ a{
     padding: 1rem 0;
 }
 
+.py-pad{
+    padding: $pad 0;
+}
+
 .my-pad{
     margin: $pad 0;
 }
@@ -185,9 +189,45 @@ a{
     font-size: 1rem;
 }
 
+.menu__list{
+    list-style: none;
+    padding: 0;
+
+    color: #000;
+}
+
+.menu__item{
+    width: 100%;
+    padding: 10px 0;
+
+    position: relative;
+
+    &::before{
+        content: '';
+
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 100%;
+
+        width: 0;
+        height: 1px;
+
+        background: $red;
+
+        transition: .3s;
+    }
+
+    &:hover::before{
+        width: 100%;
+    }
+}
+
 //styles
 @import 'items/input';
 @import 'items/checkbox';
 @import 'items/radio';
+@import 'items/file';
 @import 'items/dropdown';
+@import 'items/table';
 @import 'adaptive/main';

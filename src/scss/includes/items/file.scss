@@ -1,0 +1,16 @@
+.file{
+    @include flex(center, center, column);
+
+    &__elem{
+        display: none;
+    }
+
+    &__but{
+        @extend %button;
+
+        background: $red;
+
+        padding: 10px 20px;
+        margin: $pad/2 0;
+    }
+}

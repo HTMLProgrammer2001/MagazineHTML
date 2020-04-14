@@ -25,7 +25,8 @@
         background: #fff;
 
         opacity: 0;
-        transition: .3s;
+        transition-duration: .3s;
+        transition-property: opacity;
 
         & .input__label{
             z-index: 10;
