@@ -1,8 +1,16 @@
-@import '../../includes/general';
+//general styles
+@import 'general';
 
+//blocks
 @import '../../blocks/paginate';
 @import '../../blocks/header';
 @import '../../blocks/subscribe';
 @import '../../blocks/footer';
 
 @import '../../blocks/adminHeader';
+
+//items
+@import "./items/main";
+
+//adaptive
+@import "./adaptive/main";

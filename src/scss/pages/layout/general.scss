@@ -1,61 +1,4 @@
-//global variables
-
-$red: #f24421;
-$gray: #333333;
-$textGray: #adadad;
-$silver: #e5e5e5;
-$saleGreen: #40b322;
-$soldYellow: #f5cc2a;
-$lightGray: #f2f2f2;
-$qText: darken(#cacaca, 40%);
-
-$prodColors:'blue', 'green', 'red', 'yellow', 'purple', 'black';
-
-$size: 16px;
-$bigSize: 18px;
-$headSize: 30px;
-
-$pad: 40px;
-
-%sale{
-    position: absolute;
-    top: 20px;
-    left: 0;
-
-    padding: 5px 10px;
-
-    color: #fff;
-    text-transform: uppercase;
-}
-
-%button{
-    text-align: center;
-
-    font: {
-        family: Poppins;
-        weight: 300;
-        size: 1rem;
-    }
-
-    border: none;
-    outline: none;
-    border-radius: 5px;
-
-    overflow: hidden;
-    cursor: pointer;
-    transition: .3s;
-
-    color: #fff;
-    text-transform: uppercase;
-}
-
-@mixin flex($jc: flex-start, $ai: flex-start, $dir: row, $wrap: nowrap){
-    display: flex;
-    justify-content: $jc;
-    align-items: $ai;
-    flex-direction: $dir;
-    flex-wrap: $wrap;
-}
+@import "../../includes/main";
 
 //general styles
 
@@ -129,12 +72,24 @@ a{
     padding: 1rem 0;
 }
 
+.m-0{
+    margin: 0;
+}
+
+.ml-10{
+    margin-left: 10px;
+}
+
 .py-pad{
     padding: $pad 0;
 }
 
 .my-pad{
     margin: $pad 0;
+}
+
+.mb-pad{
+    margin-bottom: $pad;
 }
 
 .mx-pad{
@@ -171,6 +126,10 @@ a{
     display: none;
 }
 
+.pull-right{
+    @include flex(flex-end, center);
+}
+
 .w-100{
     width: 100%;
 }
@@ -182,6 +141,7 @@ a{
 .center{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .sm{
@@ -223,11 +183,31 @@ a{
     }
 }
 
-//styles
-@import 'items/input';
-@import 'items/checkbox';
-@import 'items/radio';
-@import 'items/file';
-@import 'items/dropdown';
-@import 'items/table';
-@import 'adaptive/main';
+.but{
+    @extend %button;
+
+    margin-top: 20px;
+
+    padding: 10px 40px;
+
+    &_outline{
+        background: transparentize($red, 1) !important;
+        color: $red !important;
+
+        border: 1px solid $red !important;
+
+        &:hover{
+            background: transparentize($red, 0) !important;
+            color: #fff !important;
+        }
+    }
+
+    &_fill{
+        color: #fff;
+        background: $red;
+
+        &:hover{
+            background: darken($red, 15%);
+        }
+    }
+}

@@ -1,0 +1,24 @@
+.goods__size{
+    padding: $pad 0;
+    list-style: none;
+
+    &-item{
+        padding: 5px;
+        cursor: pointer;
+
+        transition: .2s;
+
+        font: {
+            family: 'Poppins';
+            weight: 300;
+        }
+
+        &_active{
+            background: $red;
+        }
+
+        &:hover{
+            background: transparentize($red, .2);
+        }
+    }
+}

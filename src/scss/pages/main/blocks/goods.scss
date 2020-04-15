@@ -27,49 +27,6 @@
         @include flex(space-between);
 
         color: $textGray;
-
-        &-filter{
-            position: relative;
-
-            cursor: pointer;
-        }
-
-        &-select{
-            appearance: none;
-            outline: none;
-            background: transparent;
-
-            padding: 5px 40px 5px 0px;
-
-            font-family: 'Poppins';
-
-            border: 0;
-
-            option{
-                font-family: 'Poppins';
-
-                cursor: pointer;
-            }
-        }
-
-        &-line{
-            position: absolute;
-            bottom: 0;
-            left: 0;
-
-            width: 100%;
-            height: 1px;
-
-            background: $red;
-        }
-
-        &-icon{
-            position: absolute;
-            right: 5px;
-            top: 5px;
-
-            z-index: -1;
-        }
     }
 
     &__color{

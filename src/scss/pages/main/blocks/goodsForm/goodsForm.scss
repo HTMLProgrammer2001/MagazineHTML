@@ -1,0 +1,51 @@
+.goods__form{
+    @media all and(max-width: 700px){
+        order: -1;
+        padding: 0;
+    }
+
+    margin-bottom: $pad;
+
+    padding: 0 $pad/2;
+
+    &-head{
+        font: {
+            weight: 700;
+            size: 1.2rem;
+            family: 'Poppins';
+        }
+
+        position: relative;
+
+        &::after{
+            content: '';
+
+            display: block;
+
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+
+            width: 25%;
+            height: 2px;
+
+            background: $silver;
+        }
+    }
+
+    &-button{
+        @extend %button;
+
+        padding: 5px 20px;
+
+        background: #333;
+
+        &:hover{
+            background: $red;
+        }
+    }
+}
+
+@import "./price";
+@import "./size";
+@import "./categories";

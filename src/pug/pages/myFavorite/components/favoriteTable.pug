@@ -1,0 +1,60 @@
+.container
+    .myOrders.py-pad
+        .pull-right
+            span.but.but_outline Continue shopping
+
+        h3 My favorite
+
+        .myOrders__header.my-pad
+            span.myOrders__find
+                .input
+                    input(type="text" required="").input__elem
+                    label.input__label Find favorite product
+                    .input__line
+
+            div
+
+        .table__wrap
+            .table
+                .table__head
+                    .table__head-item ID
+                    .table__head-item Product
+                    .table__head-item Actions
+
+                .table__content
+                    .table__row
+                        .table__col #43534455
+                        .table__col
+                            img(src="image/product.png").mb-10
+                            div TShirt
+                        .table__col
+                            i.fas.fa-times.cur
+                            i.fas.fa-eye.ml-10.cur
+
+
+                    .table__row
+                        .table__col #43534455
+                        .table__col
+                            img(src="image/product.png").mb-10
+                            div TShirt
+                        .table__col
+                            i.fas.fa-times.cur
+                            i.fas.fa-eye.ml-10.cur
+
+                    .table__row
+                        .table__col #43534455
+                        .table__col
+                            img(src="image/product.png").mb-10
+                            div TShirt
+                        .table__col
+                            i.fas.fa-times.cur
+                            i.fas.fa-eye.ml-10.cur
+
+
+
+    .pagination.mb-pad
+        .pagination__item.pagination__item_disabled Prev
+        .pagination__item.pagination__item_active 1
+        .pagination__item 2
+        .pagination__item 3
+        .pagination__item Next

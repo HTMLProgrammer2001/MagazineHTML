@@ -1,0 +1,17 @@
+.goods__categories{
+    padding: $pad 0;
+
+    &-list{
+        list-style: none;
+        user-select: none;
+
+        padding: 0 $pad/2;
+        margin: 0;
+    }
+
+    &-item{
+        .checkbox{
+            margin: 5px 0;
+        }
+    }
+}

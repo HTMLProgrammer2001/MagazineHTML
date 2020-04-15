@@ -1,0 +1,38 @@
+.pagination{
+    @include flex(center, center);
+
+    &__item{
+        @extend .but;
+        @extend .but_outline;
+
+        @include flex(center, center);
+
+        padding: 10px 20px;
+        margin: 0;
+
+        border-radius: 0;
+
+        &_active{
+            background: $red !important;
+            color: #fff !important;
+        }
+
+        &_disabled{
+            color: $textGray !important;
+            border-color: $textGray !important;
+
+            &:hover{
+                color: $textGray !important;
+                background: transparent !important;
+            }
+        }
+
+        &:first-child{
+            border-radius: 5px 0 0 5px;
+        }
+
+        &:last-child{
+            border-radius: 0 5px 5px 0;
+        }
+    }
+}

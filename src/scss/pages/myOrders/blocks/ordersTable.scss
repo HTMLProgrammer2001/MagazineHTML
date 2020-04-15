@@ -1,0 +1,38 @@
+.myOrders{
+    &__header{
+        @include flex(space-between, flex-end);
+
+        @media all and (max-width: 550px){
+            flex-direction: column;
+
+            align-items: center;
+        }
+    }
+
+    &__find{
+        .input{
+            margin: 0;
+
+            @media all and (max-width: 550px){
+                margin-bottom: $pad;
+            }
+        }
+    }
+
+    &__types{
+        @include flex(space-around, center, row, wrap);
+        width: 100%;
+
+        &>*{
+            width: 25%;
+
+            @media all and(max-width: 650px){
+                width: 50%;
+            }
+
+            @media all and (max-width: 319px){
+                width: 100%;
+            }
+        }
+    }
+}

@@ -9,21 +9,30 @@
         .admHeader__menu
             .admHeader__divider Navigation menu
 
-            .admHeader__item.admHeader__item_active
-                i.fas.fa-user.admHeader__icon
-                span Profile
-            .admHeader__item
-                i.fas.fa-shopping-cart.admHeader__icon
-                span My orders
-            .admHeader__item
-                i.fas.fa-star.admHeader__icon
-                span Favorite
-            .admHeader__item
-                i.fas.fa-comments.admHeader__icon
-                span My comments
-            .admHeader__item
-                i.fas.fa-envelope.admHeader__icon
-                span Subscribes
+            a(href='./profile.html')
+                .admHeader__item.admHeader__item_active
+                    i.fas.fa-user.admHeader__icon
+                    span Profile
+
+            a(href='./orders.html')
+                .admHeader__item
+                    i.fas.fa-shopping-cart.admHeader__icon
+                    span Orders
+
+            a(href='./favorite.html')
+                .admHeader__item
+                    i.fas.fa-star.admHeader__icon
+                    span Favorite
+
+            a(href='./reviews.html')
+                .admHeader__item
+                    i.fas.fa-comments.admHeader__icon
+                    span Reviews
+
+            a(href='./settings.html')
+                .admHeader__item
+                    i.fas.fa-cog.admHeader__icon
+                    span Settings
 
         img(src="image/adminLogo.png").admHeader__logo
 
@@ -38,8 +47,12 @@
         .dropdown__body
             .dropdown__content
                 ul.menu__list
-                    li.menu__item Profile
-                    li.menu__item Settings
-                    li.menu__item Orders
-                    li.menu__item Favorite
+                    li.menu__item
+                        a(href='./profile.html') Profile
+                    li.menu__item
+                        a(href='./settings.html') Settings
+                    li.menu__item
+                        a(href='./orders.html') Orders
+                    li.menu__item
+                        a(href='./favorite.html') Favorite
                     li.menu__item Log out

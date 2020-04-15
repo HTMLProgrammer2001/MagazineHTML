@@ -1,0 +1,77 @@
+.container
+    .myOrders.py-pad
+        .pull-right
+            span.but.but_outline Continue shopping
+
+        h3 My orders
+
+        .myOrders__header.my-pad
+            span.myOrders__find
+                .input
+                    input(type="text" required="").input__elem
+                    label.input__label Find order
+                    .input__line
+
+            .select.cur
+                select.select__input.cur
+                    option(selected="") Latest
+                    option Newest
+
+                i.fas.fa-chevron-down.select__icon
+                .select__line
+
+        .myOrders__types.my-pad
+            .radio
+                label.row
+                    input(type="radio" name="filter").radio__elem
+                    span.radio__label All
+
+            .radio
+                label.row
+                    input(type="radio" name="filter").radio__elem
+                    span.radio__label Finished
+
+            .radio
+                label.row
+                    input(type="radio" name="filter").radio__elem
+                    span.radio__label In move
+
+            .radio
+                label.row
+                    input(type="radio" name="filter").radio__elem
+                    span.radio__label Payment
+
+        .table__wrap
+            .table
+                .table__head
+                    .table__head-item ID
+                    .table__head-item Date
+                    .table__head-item Price
+                    .table__head-item Status
+
+                .table__content
+                    .table__row
+                        .table__col #43534455
+                        .table__col 20.03.2020
+                        .table__col $90.00
+                        .table__col TShirt
+
+                    .table__row
+                        .table__col #43534455
+                        .table__col 20.03.2020
+                        .table__col $90.00
+                        .table__col TShirt
+
+                    .table__row
+                        .table__col #43534455
+                        .table__col 20.03.2020
+                        .table__col $90.00
+                        .table__col TShirt
+
+
+    .pagination.mb-pad
+        .pagination__item.pagination__item_disabled Prev
+        .pagination__item.pagination__item_active 1
+        .pagination__item 2
+        .pagination__item 3
+        .pagination__item Next
