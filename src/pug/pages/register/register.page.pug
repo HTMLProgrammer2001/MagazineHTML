@@ -1,0 +1,10 @@
+extends ../../layout
+
+block assets
+    title Sign in
+
+block content
+    include ../../includes/paginateMixin
+    +paginate(['Home', 'Checkout'])
+
+    include components/registerForm

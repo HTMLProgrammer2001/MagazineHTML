@@ -1,0 +1,58 @@
+.admHeader
+    .row
+        .burger
+            .burger__body
+                .burger__item
+                .burger__item
+                .burger__item
+
+        .admHeader__menu
+            .admHeader__divider Admin panel
+
+            a(href='/admin/tags')
+                .admHeader__item
+                    i.fas.fa-cog.admHeader__icon
+                    span Tags
+
+            a(href='/admin/categories')
+                .admHeader__item
+                    i.fas.fa-cog.admHeader__icon
+                    span Categories
+
+            a(href='/admin/users')
+                .admHeader__item
+                    i.fas.fa-cog.admHeader__icon
+                    span Users
+
+            a(href='/admin/reviews')
+                .admHeader__item
+                    i.fas.fa-cog.admHeader__icon
+                    span Reviews
+
+            a(href='/admin/products')
+                .admHeader__item
+                    i.fas.fa-cog.admHeader__icon
+                    span Products
+
+        img(src="/image/adminLogo.png").admHeader__logo
+
+    .row.cur.dropdown
+        .admHeader__user.dropdown__elem
+            .admHeader__name
+                span Yuri Prisyazhny
+
+            img(src="/image/ava.png").admHeader__photo
+            i.fas.fa-sort-down.ml-1
+
+        .dropdown__body
+            .dropdown__content
+                ul.menu__list
+                    li.menu__item
+                        a(href='./profile.html') Profile
+                    li.menu__item
+                        a(href='./settings.html') Settings
+                    li.menu__item
+                        a(href='./orders.html') Orders
+                    li.menu__item
+                        a(href='./favorite.html') Favorite
+                    li.menu__item Log out

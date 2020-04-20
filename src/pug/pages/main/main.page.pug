@@ -1,0 +1,14 @@
+extends ../../layout
+
+block assets
+    title Home
+
+block content
+    include ../../includes/paginateMixin
+    +paginate(['Home', 'Products'])
+
+    .goods
+        .container
+            include components/goods
+
+            include components/goodsForm

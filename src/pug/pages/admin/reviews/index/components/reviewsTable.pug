@@ -1,0 +1,82 @@
+.container
+    .myOrders.py-pad
+
+        h2 Reviews
+
+        .myOrders__header.my-pad
+            span.myOrders__find
+                .input
+                    input(type="text" required="").input__elem
+                    label.input__label Find review
+
+            .select.cur
+                select.select__input.cur
+                    option(selected) New first
+                    option Latest first
+                    option Better first
+                    option Worse first
+
+                i.fas.fa-chevron-down.select__icon
+                .select__line
+
+        .myOrders__types.my-pad
+            .radio
+                label.row
+                    input(type="radio" name="filter").radio__elem
+                    span.radio__label All
+
+            .radio
+                label.row
+                    input(type="radio" name="filter").radio__elem
+                    span.radio__label Accepted
+
+            .radio
+                label.row
+                    input(type="radio" name="filter").radio__elem
+                    span.radio__label Declaimed
+
+            .radio
+                label.row
+                    input(type="radio" name="filter").radio__elem
+                    span.radio__label Without answer
+
+            .center.space-between.my-pad
+                .input
+                    input(type="date" required="" value="2020-01-01").input__elem
+                    label.input__label From
+
+                .input.ml-1
+                    input(type="date" required="" value="2020-06-06").input__elem
+                    label.input__label To
+
+        .table__wrap
+            .table
+                .table__head
+                    .table__head-item ID
+                    .table__head-item User
+                    .table__head-item Mark
+                    .table__head-item Product
+                    .table__head-item Date
+                    .table__head-item Actions
+
+                .table__content
+                    .table__row
+                        .table__col #43534455
+                        .table__col Yuri Prisyazhny
+                        .table__col
+                            include ../../../../single/components/reviews_mark.html
+
+                        .table__col TShirt
+                        .table__col 20.03.2019
+
+                        .table__col
+                            i.fas.fa-times.cur
+                            a(href="edit.html")
+                                i.fas.fa-pencil-alt.ml-10.cur
+
+    .pagination.mb-pad
+        .pagination__item.pagination__item_disabled Prev
+        .pagination__item.pagination__item_active 1
+        .pagination__item 2
+        .pagination__item 3
+        .pagination__item Next

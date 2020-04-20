@@ -21,7 +21,7 @@ const webpack = require('webpack');
 sass.compiler = require('node-sass');
 
 function scss(){
-	return gulp.src('./src/scss/pages/*/*.scss', {
+	return gulp.src('./src/scss/pages/**/*.page.scss', {
 		allowEmpty: true
 	})
 		.pipe(sass().on('error', sass.logError))
@@ -76,13 +76,13 @@ function image() {
 }
 
 function pug() {
-	return gulp.src('./src/pug/pages/*/*.pug', {
+	return gulp.src('./src/pug/pages/**/*.page.pug', {
 		allowEmpty: true
 	})
-		.pipe(pugCompiler())
+		.pipe(pugCompiler({pretty: true}))
 		.pipe(rename((path) => ({
-			basename: path.basename,
-			dirname: './',
+			basename: path.basename.slice(0, path.basename.lastIndexOf('.')),
+			dirname: path.dirname.split('\\').slice(0, -1).join('\\'),
 			extname: '.html'
 		})))
 		.pipe(gulp.dest('./dist/'))

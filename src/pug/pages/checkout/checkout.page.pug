@@ -1,0 +1,12 @@
+extends ../../layout
+
+block assets
+    title Checkout
+
+block content
+    include ../../includes/paginateMixin
+    +paginate(['Home', 'Checkout'])
+
+    include components/questions
+    include components/billing
+    include components/payment

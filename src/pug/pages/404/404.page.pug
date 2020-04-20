@@ -1,0 +1,11 @@
+extends ../../layout
+
+block assets
+    title 404 - Not found
+
+block content
+    include ../../includes/paginateMixin
+    +paginate(['Home', 'Not found'])
+
+    .error
+        img(src='./image/not-found.png').error__img

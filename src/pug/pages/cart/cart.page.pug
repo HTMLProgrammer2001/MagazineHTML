@@ -1,0 +1,11 @@
+extends ../../layout
+
+block assets
+    title Cart
+
+block content
+    include ../../includes/paginateMixin
+    +paginate(['Home', 'Cart'])
+
+    include components/orders
+    include components/check

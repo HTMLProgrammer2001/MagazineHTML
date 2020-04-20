@@ -1,0 +1,55 @@
+.container
+    .myOrders.py-pad
+
+        h3 Categories
+
+        .myOrders__header.my-pad
+            span.myOrders__find
+                .input
+                    input(type="text" required="").input__elem
+                    label.input__label Find category
+
+            a(href="create.html")
+                button.but.but_outline Create
+
+        .table__wrap
+            .table
+                .table__head
+                    .table__head-item ID
+                    .table__head-item Category
+                    .table__head-item Actions
+
+                .table__content
+                    .table__row
+                        .table__col #43534455
+                        .table__col Category 1
+                        .table__col
+                            i.fas.fa-times.cur
+                            a(href="edit.html")
+                                i.fas.fa-pencil-alt.ml-10.cur
+
+
+                    .table__row
+                        .table__col #43534455
+                        .table__col Category 2
+                        .table__col
+                            i.fas.fa-times.cur
+                            a(href="edit.html")
+                                i.fas.fa-pencil-alt.ml-10.cur
+
+                    .table__row
+                        .table__col #43534455
+                        .table__col Category 3
+                        .table__col
+                            i.fas.fa-times.cur
+                            a(href="edit.html")
+                                i.fas.fa-pencil-alt.ml-10.cur
+
+
+
+    .pagination.mb-pad
+        .pagination__item.pagination__item_disabled Prev
+        .pagination__item.pagination__item_active 1
+        .pagination__item 2
+        .pagination__item 3
+        .pagination__item Next
