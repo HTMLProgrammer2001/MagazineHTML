@@ -5,9 +5,7 @@
 
         .myOrders__header.my-pad
             span.myOrders__find
-                .input
-                    input(type="text" required="").input__elem
-                    label.input__label Find review
+                div
 
             .select.cur
                 select.select__input.cur
@@ -40,7 +38,7 @@
                     input(type="radio" name="filter").radio__elem
                     span.radio__label Without answer
 
-            .center.space-between.my-pad
+            .center.space-between.my-pad.period
                 .input
                     input(type="date" required="" value="2020-01-01").input__elem
                     label.input__label From
@@ -71,8 +69,9 @@
 
                         .table__col
                             i.fas.fa-times.cur
-                            a(href="edit.html")
-                                i.fas.fa-pencil-alt.ml-10.cur
+
+                            a(href="#")
+                                i.fas.fa-eye.ml-10.cur
 
     .pagination.mb-pad
         .pagination__item.pagination__item_disabled Prev

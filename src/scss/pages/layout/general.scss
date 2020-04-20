@@ -210,3 +210,17 @@ a{
         }
     }
 }
+
+.reviews__mark{
+    max-width: 100%;
+}
+
+.period{
+    @media all and(max-width: 500px){
+         flex-direction: column;
+
+        .ml-1{
+            margin-left: 0;
+        }
+    }
+}
