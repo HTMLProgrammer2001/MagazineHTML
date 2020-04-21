@@ -1,0 +1,42 @@
+.datalist{
+    @include flex(center, flex-start, column);
+
+    padding: 20px;
+
+    border: 1px solid $silver;
+    border-radius: 5px;
+
+    &__values{
+        @include flex(center, flex-start, row, wrap);
+
+        width: fit-content;
+        max-width: 100%;
+        padding: 5px;
+
+        margin-bottom: 1rem;
+    }
+
+    &__value{
+        @include flex(space-between, center);
+
+        background: $red;
+        color: #fff;
+
+        padding: 5px;
+        margin-right: 5px;
+
+        border-radius: 5px;
+
+        &__text{
+            margin-right: 1rem;
+        }
+    }
+
+    &__input{
+        @extend .input__elem;
+    }
+
+    &__select{
+        width: 100%;
+    }
+}

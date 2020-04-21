@@ -1,0 +1,75 @@
+.billing.py-pad
+    .container
+        .center_block
+            .login__head Create product
+
+            .billing__form.w-75
+                div.input
+                    input(required).input__elem
+                    label.input__label
+                        span Name
+                        span.red *
+                    .input__line
+
+                .my-pad
+                    .select.cur
+                        select.select__input.cur
+                            option(selected) Category 1
+                            option Category 2
+                            option Category 3
+                            option Category 4
+                            option Category 5
+
+                        i.fas.fa-chevron-down.select__icon
+                        .select__line
+
+                    .center
+                        .my-pad.datalist.w-100
+
+                            .datalist__values
+                                .datalist__value
+                                    .datalist__value__text Tag1
+                                    i.fas.fa-times.cur
+
+                                .datalist__value
+                                    .datalist__value__text Tag1
+                                    i.fas.fa-times.cur
+
+                            .input
+                                input(list="tags" multiple="").datalist__input
+                                label.input__label
+                                    span Tags
+                                .input__line
+
+                            datalist(id="tags").datalist__select
+                                option.datalist__select__item Tag1
+                                option.datalist__select__item Tag2
+                                option.datalist__select__item Tag3
+
+                div.input
+                    input(required type="number").input__elem
+                    label.input__label
+                        span Price
+                        span.red *
+                    .input__line
+
+                div.input
+                    textarea(required rows=1)#message.input__elem
+                    label.input__label
+                        span Description
+                    .input__line(style="bottom: 4px")
+
+                .file.my-pad
+                    .images.w-100
+                        img(src="/image/product.png").images__item
+                        img(src="/image/product.png").images__item
+                        img(src="/image/product.png").images__item
+
+                    label
+                        input(type="file").file__elem
+
+                        .file__but Select photos
+
+            .row.space-between.my-pad.w-100
+                button.check__but.mb-10 Back
+                button.check__but Create

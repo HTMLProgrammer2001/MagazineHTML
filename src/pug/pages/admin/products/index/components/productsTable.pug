@@ -1,0 +1,89 @@
+.container
+    .myOrders.py-pad
+
+        h3 Products
+
+        .myOrders__header.my-pad
+            span.myOrders__find
+                .input
+                    input(type="text" required="").input__elem
+                    label.input__label Find product
+
+            a(href="create.html")
+                button.but.but_outline Create
+
+        .center
+            .select.cur.mb-pad.w-50.admin__products__select
+                select.select__input.cur
+                    option(selected) New first
+                    option Latest first
+                    option More popular first
+                    option Unpopular first
+                    option Better first
+                    option Worse first
+
+                i.fas.fa-chevron-down.select__icon
+                .select__line
+
+        .table__wrap
+            .table
+                .table__head
+                    .table__head-item ID
+                    .table__head-item Product
+                    .table__head-item Price
+                    .table__head-item Category
+                    .table__head-item Mark
+                    .table__head-item Actions
+
+                .table__content
+                    .table__row
+                        .table__col #43534455
+
+                        .table__col
+                            img(src="/image/product.png").mb-10
+                            .center Product
+
+                        .table__col $90.00
+
+                        .table__col Category 1
+
+                        .table__col.text-muted
+                            include ../../../../single/components/reviews_mark.html
+                            .center.mt-10 365 reviews
+                            .center 799 buy
+
+                        .table__col
+                            i.fas.fa-times.cur
+                            a(href="edit.html")
+                                i.fas.fa-pencil-alt.ml-10.cur
+                                i.fas.fa-eye.ml-10.cur
+
+
+                    .table__row
+                        .table__col #43534455
+
+                        .table__col
+                            img(src="/image/product.png").mb-10
+                            .center Product
+
+                        .table__col $90.00
+
+                        .table__col Category 1
+
+                        .table__col.text-muted
+                            include ../../../../single/components/reviews_mark.html
+                            .center.mt-10 365 reviews
+                            .center 799 buy
+
+                        .table__col
+                            i.fas.fa-times.cur
+                            a(href="edit.html")
+                                i.fas.fa-pencil-alt.ml-10.cur
+                                i.fas.fa-eye.ml-10.cur
+
+    .pagination.mb-pad
+        .pagination__item.pagination__item_disabled Prev
+        .pagination__item.pagination__item_active 1
+        .pagination__item 2
+        .pagination__item 3
+        .pagination__item Next

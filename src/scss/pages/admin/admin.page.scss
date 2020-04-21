@@ -1,0 +1,28 @@
+@import "../../includes/main";
+
+.images{
+    @include flex(center, center, row, wrap);
+
+    width: 100%;
+
+    &__item{
+        margin: 1rem;
+    }
+}
+
+.period{
+    @media all and(max-width: 500px){
+        flex-direction: column;
+
+        .ml-1{
+            margin-left: 0;
+        }
+    }
+}
+
+
+@media all and(max-width: 319px){
+    .admin__products__select{
+        width: 100%;
+    }
+}

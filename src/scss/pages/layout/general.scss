@@ -138,15 +138,35 @@ a{
     width: 50%;
 }
 
+.w-25{
+    width: 25%;
+}
+
 .center{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    &_block{
+        @include flex(center, center, column);
+    }
 }
 
 .sm{
     padding: 3px 5px !important;
     font-size: 1rem;
+}
+
+.mt-10{
+    margin-top: 10px;
+}
+
+.mb-1{
+    margin-bottom: 1rem;
+}
+
+.text-muted{
+    color: $textGray;
 }
 
 .menu__list{
@@ -215,12 +235,6 @@ a{
     max-width: 100%;
 }
 
-.period{
-    @media all and(max-width: 500px){
-         flex-direction: column;
-
-        .ml-1{
-            margin-left: 0;
-        }
-    }
+.bold{
+    font-weight: bold;
 }
