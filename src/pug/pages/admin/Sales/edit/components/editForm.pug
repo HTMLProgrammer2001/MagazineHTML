@@ -1,0 +1,45 @@
+.billing.py-pad
+    .container
+        .login__head Edit user
+
+        .billing__form
+            .file.my-pad
+                img(src="/image/product.png").file_image
+
+                label
+                    input(type="file").file__elem
+
+                    .file__but Select avatar
+
+            div.input
+                input(required value="Yura").input__elem
+                label.input__label
+                    span First Name
+                    span.red *
+                .input__line
+
+            div.input
+                input(required value="Prisyazhny").input__elem
+                label.input__label
+                    span Last Name
+                    span.red *
+                .input__line
+
+            div.input
+                input(required value="cssuperpy@gmail.com").input__elem
+                label.input__label
+                    span Email Address
+                    span.red *
+                .input__line
+
+            .select.cur.my-pad
+                select.select__input.cur
+                    option(selected) User
+                    option Moderator
+
+                i.fas.fa-chevron-down.select__icon
+                .select__line
+
+            .row.space-between.my-pad.w-100
+                div
+                button.check__but Update
