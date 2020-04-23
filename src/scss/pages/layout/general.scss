@@ -80,12 +80,20 @@ a{
     margin-left: 10px;
 }
 
+.ml-2{
+    margin-left: 2rem;
+}
+
 .py-pad{
     padding: $pad 0;
 }
 
 .my-pad{
     margin: $pad 0;
+}
+
+.mt-pad{
+    margin-top: $pad;
 }
 
 .mb-pad{
@@ -106,6 +114,10 @@ a{
 
 .red{
     color: $red;
+}
+
+.d-block{
+    display: block;
 }
 
 .text-muted{

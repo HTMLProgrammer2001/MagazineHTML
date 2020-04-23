@@ -10,6 +10,36 @@
     }
 }
 
+.colors{
+    @include flex(flex-start, center, row, wrap);
+
+    margin-top: $pad/2;
+
+    padding-left: 1rem;
+
+    &__item{
+        margin-right: $pad/2;
+
+        text-align: center;
+        line-height: 25px;
+
+        color: #fff;
+    }
+
+    &__add{
+        display: block;
+
+        background: $red;
+        border: none;
+        outline: none;
+
+        text-align: center;
+        line-height: 25px;
+
+        color: #fff;
+    }
+}
+
 .period{
     @media all and(max-width: 500px){
         flex-direction: column;

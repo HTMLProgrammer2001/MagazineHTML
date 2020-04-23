@@ -11,6 +11,7 @@
                         span.red *
                     .input__line
 
+                //Category select
                 .my-pad
                     .select.cur
                         select.select__input.cur
@@ -23,6 +24,7 @@
                         i.fas.fa-chevron-down.select__icon
                         .select__line
 
+                    //Tags list
                     .center
                         .my-pad.datalist.w-100
 
@@ -46,12 +48,58 @@
                                 option.datalist__select__item Tag2
                                 option.datalist__select__item Tag3
 
+                //price
                 div.input
                     input(required type="number").input__elem
                     label.input__label
                         span Price
                         span.red *
                     .input__line
+
+                //sizes checkboxes
+                div.mt-pad.pl-1
+                    span Sizes
+                    span.red *
+
+                .myOrders__types.ml-2
+
+                    .checkbox
+                        input(type = "checkbox" id="sm").checkbox__elem
+                        label(for="sm").checkbox__label
+                            span S
+
+                    .checkbox
+                        input(type = "checkbox" id="md").checkbox__elem
+                        label(for="md").checkbox__label
+                            span M
+
+                    .checkbox
+                        input(type = "checkbox" id="lg").checkbox__elem
+                        label(for="lg").checkbox__label
+                            span L
+
+                    .checkbox
+                        input(type = "checkbox" id="xl").checkbox__elem
+                        label(for="xl").checkbox__label
+                            span XL
+
+                //Colors list
+                div.mt-pad.pl-1
+                    span Colors
+                    span.red *
+
+                .colors
+                    .colors__item
+                        .goods__color-item.goods__color-item_black &times;
+
+                    .colors__item
+                        .goods__color-item.goods__color-item_red &times;
+
+                    .colors__item
+                        .goods__color-item.goods__color-item_green &times;
+
+                    input(type="color" id="color").hidden
+                    label(for="color").colors__add.goods__color-item.d-block +
 
                 div.input
                     textarea(required rows=1)#message.input__elem
