@@ -1,16 +1,123 @@
 .billing.py-pad
-    .container.w-50
-        .login__head Edit category
+    .container
+        .center_block
+            .login__head Edit product
 
-        .billing__form
+            .billing__form.w-75
+                div.input
+                    input(required value="TShirt").input__elem
+                    label.input__label
+                        span Name
+                        span.red *
+                    .input__line
 
-            div.input
-                input(required value="Category 1").input__elem
-                label.input__label
-                    span Name
+                //Category select
+                .my-pad
+                    .select.cur
+                        select.select__input.cur
+                            option(selected) Category 1
+                            option Category 2
+                            option Category 3
+                            option Category 4
+                            option Category 5
+
+                        i.fas.fa-chevron-down.select__icon
+                        .select__line
+
+                    //Tags list
+                    .center
+                        .my-pad.datalist.w-100
+
+                            .datalist__values
+                                .datalist__value
+                                    .datalist__value__text Tag1
+                                    i.fas.fa-times.cur
+
+                                .datalist__value
+                                    .datalist__value__text Tag1
+                                    i.fas.fa-times.cur
+
+                            .input
+                                input(list="tags" multiple="").datalist__input
+                                label.input__label
+                                    span Tags
+                                .input__line
+
+                            datalist(id="tags").datalist__select
+                                option.datalist__select__item Tag1
+                                option.datalist__select__item Tag2
+                                option.datalist__select__item Tag3
+
+                //price
+                div.input
+                    input(required type="number" value="90.00").input__elem
+                    label.input__label
+                        span Price
+                        span.red *
+                    .input__line
+
+                //sizes checkboxes
+                div.mt-pad.pl-1
+                    span Sizes
                     span.red *
-                .input__line
+
+                .myOrders__types.ml-2
+
+                    .checkbox
+                        input(type = "checkbox" id="sm" checked="").checkbox__elem
+                        label(for="sm").checkbox__label
+                            span S
+
+                    .checkbox
+                        input(type = "checkbox" id="md" checked="").checkbox__elem
+                        label(for="md").checkbox__label
+                            span M
+
+                    .checkbox
+                        input(type = "checkbox" id="lg").checkbox__elem
+                        label(for="lg").checkbox__label
+                            span L
+
+                    .checkbox
+                        input(type = "checkbox" id="xl").checkbox__elem
+                        label(for="xl").checkbox__label
+                            span XL
+
+                //Colors list
+                div.mt-pad.pl-1
+                    span Colors
+                    span.red *
+
+                .colors
+                    .colors__item
+                        .goods__color-item.goods__color-item_black &times;
+
+                    .colors__item
+                        .goods__color-item.goods__color-item_red &times;
+
+                    .colors__item
+                        .goods__color-item.goods__color-item_green &times;
+
+                    input(type="color" id="color").hidden
+                    label(for="color").colors__add.goods__color-item.d-block +
+
+                div.input
+                    textarea(required rows=1)#message.input__elem
+                    label.input__label
+                        span Description
+                    .input__line(style="bottom: 4px")
+
+                .file.my-pad
+                    .images.w-100
+                        img(src="/image/product.png").images__item
+                        img(src="/image/product.png").images__item
+                        img(src="/image/product.png").images__item
+
+                    label
+                        input(type="file").file__elem
+
+                        .file__but Select photos
 
             .row.space-between.my-pad.w-100
-                div
-                button.check__but Update
+                button.check__but.mb-10 Back
+                button.check__but Create
