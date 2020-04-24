@@ -1,0 +1,44 @@
+.likes{
+    @include flex(space-between, center, row, wrap);
+
+    &__item{
+        @media all and (max-width: 900px){
+            width: 45%;
+        }
+
+        @media all and (max-width: 600px){
+            width: 100%;
+        }
+
+        @media all and (max-width: 319px){
+            flex-direction: column;
+        }
+
+        width: 30%;
+
+        border: 1px dashed $textGray;
+        border-left: none;
+        border-right: none;
+
+        height: 100px;
+        padding: 15px;
+
+        @include flex(flex-start, center);
+    }
+
+    &__ava{
+        height: 100%;
+
+        border-radius: 50%;
+        overflow: hidden;
+
+        padding: 0;
+        margin-right: 1rem;
+
+        @include flex(center, center);
+    }
+
+    &__img{
+        max-height: 100%;
+    }
+}

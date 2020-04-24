@@ -1,0 +1,18 @@
+.review-info{
+    &__item{
+        @include flex(space-between, center);
+
+        padding: 10px;
+        margin-bottom: 10px;
+
+        border-bottom: 2px dashed $textGray;
+
+        &_column{
+            @include flex(flex-start, flex-start, column);
+        }
+    }
+
+    &__head{
+        font-weight: 700;
+    }
+}
