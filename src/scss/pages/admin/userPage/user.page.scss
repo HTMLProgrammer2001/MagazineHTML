@@ -1,0 +1,42 @@
+@import "../../../includes/main";
+
+.tabs{
+    &__items{
+        @include flex(flex-start, center);
+    }
+
+    &__item{
+        padding: $pad/4;
+        margin: 0 1px;
+
+        border: 1px solid $gray;
+        border-bottom: none;
+        border-radius: 5px 5px 0 0;
+
+        cursor: pointer;
+
+        &_active{
+            border-color: $red;
+            color: $red;
+
+            box-shadow: 2px 1px 0 1px #fff;
+        }
+    }
+
+    &__content{
+        border: 1px solid $red;
+
+        margin-left: 1px;
+        padding: $pad/2;
+
+        &-item{
+            display: none;
+            opacity: 0;
+
+            &_active{
+                display: block;
+                opacity: 1;
+            }
+        }
+    }
+}

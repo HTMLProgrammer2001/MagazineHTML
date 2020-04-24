@@ -89,3 +89,19 @@ $('.goods__price-point').on('mousedown', function (event) {
 });
 
 autosize(document.getElementById('message'));
+
+//tabs
+$('.tabs__item').on('click', (e) => {
+	e.preventDefault();
+
+	if($(e.target).hasClass('tabs__item_active')){
+		return;
+	}
+
+	$('.tabs__item_active').removeClass('tabs__item_active');
+	$(e.target).addClass('tabs__item_active');
+
+	let targetContent = $(e.target).attr('href');
+	$('.tabs__content-item_active').removeClass('tabs__content-item_active');
+	$(targetContent).addClass('tabs__content-item_active');
+});

@@ -1,0 +1,24 @@
+extends ../../../../adminLayout
+
+block assets
+    title Admin | Product page
+
+block content
+    .container
+        include components/info
+
+        .tabs
+            .tabs__items
+                a(href="#orders").tabs__item.tabs__item_active Orders
+                a(href="#reviews").tabs__item Reviews
+                a(href="#favorites").tabs__item Favorites
+
+            .tabs__content
+                .tabs__content-item.tabs__content-item_active#orders
+                    include ./components/ordersTable
+
+                .tabs__content-item#reviews
+                    include ./components/reviewsTable
+
+                .tabs__content-item#favorites
+                    include ./components/favoritesTable
