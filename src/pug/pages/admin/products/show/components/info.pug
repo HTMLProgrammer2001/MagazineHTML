@@ -1,0 +1,49 @@
+.product-info.py-pad
+    .product-info__ava
+        img(src="/image/product.png").product-info__img.product-info__img_lg
+
+        .row.product-info__row
+            img(src="/image/product.png").product-info__img
+            img(src="/image/product.png").product-info__img
+            img(src="/image/product.png").product-info__img
+
+    .product-info__fields
+
+        .product-info__field
+            .product-info__head Name
+            .product-info__content TShirt
+
+        .product-info__field
+            .product-info__head Category
+            .product-info__content Category 1
+
+        .product-info__field
+            .product-info__head Tags
+            .product-info__content
+                a(href='#') Tag1
+                | ,
+                a(href='#') Tag2
+
+        .product-info__field
+            .product-info__head Price
+            .product-info__content.bold.red $24.00
+
+        .product-info__field
+            .product-info__head Sizes
+            .product-info__content XS | S | M | L
+
+        .product-info__field
+            .product-info__head Colors
+            .product-info__content
+                .goods__color.goods__color_sm
+                    .goods__color-item.goods__color-item_red
+                    .goods__color-item.goods__color-item_green
+                    .goods__color-item.goods__color-item_blue
+                    .goods__color-item.goods__color-item_purple
+                    .goods__color-item.goods__color-item_yellow
+                    .goods__color-item.goods__color-item_black
+
+        .product-info__field
+            .product-info__head Average mark
+            .product-info__content
+                include ../../../../../includes/reviews_mark.html

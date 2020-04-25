@@ -1,0 +1,41 @@
+.product-info{
+    @include flex(space-between, flex-start);
+
+    &__ava{
+        @include flex(flex-start, flex-start, column);
+
+        width: 50%;
+        max-width: 400px;
+    }
+
+    &__img{
+        padding: 5px;
+        width: 100%;
+    }
+
+    &__row {
+        @include flex(space-between, center);
+
+        img{
+            width: 33%;
+        }
+    }
+
+    &__fields{
+        padding: $pad/2;
+
+        width: 100%;
+    }
+
+    &__field{
+        @include flex(space-between, center);
+
+        padding: $pad/2;
+
+        border-bottom: 2px dashed $textGray;
+    }
+
+    &__head{
+        font-weight: 700;
+    }
+}

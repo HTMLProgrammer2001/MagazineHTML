@@ -1,0 +1,9 @@
+.product{
+    &__order{
+        @include flex(space-between, center);
+
+        padding: $pad/2;
+
+        border-bottom: 2px dashed $textGray;
+    }
+}

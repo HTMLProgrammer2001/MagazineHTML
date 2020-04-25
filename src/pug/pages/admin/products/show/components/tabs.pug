@@ -1,0 +1,75 @@
+.tabs
+    .tabs__items
+        a(href="#reviews").tabs__item.tabs__item_active Reviews (12)
+        a(href="#orders").tabs__item Orders (23)
+
+    .tabs__content
+        .tabs__content-item.tabs__content-item_active#reviews
+            .product__reviews
+                a(href="#").product__review
+                    .product__review-ava
+                        img(src="/image/ava.png").product__review-img
+                    .product__review-content
+                        .product__review-author Yura Prisyazhny
+                        .product__review-mark
+                            include ../../../../../includes/reviews_mark.html
+
+                        .product__review-text.mb-1
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet atque consequuntur distinctio dolor explicabo, odio sapiente voluptas! Corporis cumque dolorum enim id impedit labore minus nobis, quae quas sed tempora?
+
+                        .row.text-muted.space-between
+                            .product__review-likes + 10
+                            .product__review-date 20.03.2020
+
+                a(href="#").product__review
+                    .product__review-ava
+                        img(src="/image/ava.png").product__review-img
+                    .product__review-content
+                        .product__review-author Yura Prisyazhny
+                        .product__review-mark
+                            include ../../../../../includes/reviews_mark.html
+
+                        .product__review-text.mb-1
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet atque consequuntur distinctio dolor explicabo, odio sapiente voluptas! Corporis cumque dolorum enim id impedit labore minus nobis, quae quas sed tempora?
+
+                        .row.text-muted.space-between
+                            .product__review-likes + 10
+                            .product__review-date 20.03.2020
+
+                a(href="#").product__review
+                    .product__review-ava
+                        img(src="/image/ava.png").product__review-img
+                    .product__review-content
+                        .product__review-author Yura Prisyazhny
+                        .product__review-mark
+                            include ../../../../../includes/reviews_mark.html
+
+                        .product__review-text.mb-1
+                            | Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet atque consequuntur distinctio dolor explicabo, odio sapiente voluptas! Corporis cumque dolorum enim id impedit labore minus nobis, quae quas sed tempora?
+
+                        .row.text-muted.space-between
+                            .product__review-likes + 10
+                            .product__review-date 20.03.2020
+
+                .center.w-100
+                    button.but.but_fill Load more
+
+        .tabs__content-item#orders
+            .product__orders
+                a(href="#").product__order
+                    .product__order-user Yuri Prisyazhny
+                    .product__order-price $90.00
+                    .product__order-date 20.03.2020
+
+                a(href="#").product__order
+                    .product__order-user Yuri Prisyazhny
+                    .product__order-price $90.00
+                    .product__order-date 20.03.2020
+
+                a(href="#").product__order
+                    .product__order-user Yuri Prisyazhny
+                    .product__order-price $90.00
+                    .product__order-date 20.03.2020
+
+                .center.w-100
+                    button.but.but_fill Load more
