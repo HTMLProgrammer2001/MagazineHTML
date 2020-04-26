@@ -1,8 +1,24 @@
 extends ../../../adminLayout
 
 block assets
-    title Admin | Categories
+    title Admin
 
 block content
     .container.py-pad
-        b Admin page
+        b.center.bold Orders diagram
+
+        .admin
+            .admin__row
+                .admin__diagram
+                    img(src="/image/diagram.jpg").admin__image
+
+                .admin__filter
+                    .select.cur
+                        select.select__input.cur
+                            option(selected) Last day
+                            option Last week
+                            option Last month
+                            option Last year
+
+                        i.fas.fa-chevron-down.select__icon
+                        .select__line
