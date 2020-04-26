@@ -1,0 +1,10 @@
+.stats{
+    @include flex(center, center, column);
+
+    &__head{
+        font-weight: 700;
+        font-size: 1.2rem;
+
+        margin-bottom: 1rem;
+    }
+}

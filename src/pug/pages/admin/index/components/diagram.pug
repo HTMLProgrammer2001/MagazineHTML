@@ -1,0 +1,20 @@
+.admin
+        .admin__head.center.bold Orders diagram
+        .admin__row
+            .admin__diagram
+                img(src="/image/diagram.jpg").admin__image
+
+            .admin__filter
+                .select.cur.mb-1
+                    select.select__input.cur
+                        option(selected) Last day
+                        option Last week
+                        option Last month
+                        option Last year
+
+                    i.fas.fa-chevron-down.select__icon
+                    .select__line
+
+                .admin__orders.mb-10.bold Total orders: 95
+                .admin__price.mb-10.bold Total price: $35523.39
+                .admin__max.mb-10.bold Max order: $300
